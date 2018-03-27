@@ -4677,7 +4677,13 @@ bool CWallet::CreateZerocoinSpendTransaction(CAmount nValue, int nSecurityLevel,
             CScript scriptZerocoinSpend;
             CScript scriptChange;
             CAmount nChange = nValueSelected - nValue;
-            if (nChange && !address) {
+
+            if (nChange < 0) {
+                receipt.SetStatus(_("Selected coins value is less than payment target"), nStatus);
+                return false;
+            }
+
+            if (nChange > 0 && !address) {
                 receipt.SetStatus(_("Need address because change is not exact"), nStatus);
                 return false;
             }
@@ -4785,6 +4791,8 @@ string CWallet::ResetMintZerocoin(bool fExtendedSearch)
         walletdb.ArchiveMintOrphan(mint);
     }
 
+    NotifyzPIVReset();
+
     string strResult = _("ResetMintZerocoin finished: ") + to_string(updates) + _(" mints updated, ") + to_string(deletions) + _(" mints deleted\n");
     return strResult;
 }
@@ -4823,6 +4831,8 @@ string CWallet::ResetSpentZerocoin()
             }
         }
     }
+
+    NotifyzPIVReset();
 
     string strResult = _("ResetSpentZerocoin finished: ") + to_string(removed) + _(" unconfirmed transactions removed\n");
     return strResult;
@@ -4904,6 +4914,22 @@ void CWallet::ZPivBackupWallet()
     }
 
     BackupWallet(*this, backupPath.string());
+}
+
+string CWallet::MintZerocoinFromOutPoint(CAmount nValue, CWalletTx& wtxNew, vector<CZerocoinMint>& vMints, const vector<COutPoint> vOutpts)
+{
+    CCoinControl* coinControl = new CCoinControl();
+    for (const COutPoint& outpt : vOutpts) {
+        coinControl->Select(outpt);
+    }
+    if (!coinControl->HasSelected()){
+        string strError = _("Error: No valid utxo!");
+        LogPrintf("MintZerocoin() : %s", strError.c_str());
+        return strError;
+    }
+    string strError = MintZerocoin(nValue, wtxNew, vMints, coinControl);
+    delete coinControl;
+    return strError;
 }
 
 string CWallet::MintZerocoin(CAmount nValue, CWalletTx& wtxNew, vector<CZerocoinMint>& vMints, const CCoinControl* coinControl)
