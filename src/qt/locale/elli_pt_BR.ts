@@ -2877,7 +2877,7 @@ https://www.transifex.com/elli-project/elli-project-translations</translation>
         <translation>Os desenvolvedores do Dash Core</translation>
     </message>
     <message>
-        <source>The ELLI Core developers</source>
+        <source>The PIVX Core developers</source>
         <translation>Os desenvolvedores do ELLI Core</translation>
     </message>
     <message>
@@ -3558,7 +3558,7 @@ https://www.transifex.com/elli-project/elli-project-translations</translation>
         <translation>Todos os direitos reservados (C) 2014-%i aos Desenvolvedores do Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The ELLI Core Developers</source>
+        <source>Copyright (C) 2015-%i The PIVX Core developers</source>
         <translation>Todos os direitos reservados (C) 2015-%i aos Desenvolvedores do ELLI Core</translation>
     </message>
     <message>

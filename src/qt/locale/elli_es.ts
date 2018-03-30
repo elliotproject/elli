@@ -3229,7 +3229,7 @@ https://www.transifex.com/elli-project/elli-project-translations</translation>
         <translation>Los desarrolladores de Dash Core</translation>
     </message>
     <message>
-        <source>The ELLI Core developers</source>
+        <source>The PIVX Core developers</source>
         <translation>Los desarrolladores de ELLI Core</translation>
     </message>
     <message>
@@ -4202,8 +4202,8 @@ por ejemplo: alertnotify=echo %%s | mail -s "ELLI Alert" admin@foo.com
         <translation>Copyright (C) 2014-%i The Dash Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The ELLI Core Developers</source>
-        <translation>Copyright (C) 2015-%i The ELLI Core Developers</translation>
+        <source>Copyright (C) 2015-%i The PIVX Core developers</source>
+        <translation>Copyright (C) 2015-%i The PIVX Core developers</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

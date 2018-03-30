@@ -5110,11 +5110,6 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>The ELLI Core developers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../networkstyle.cpp" line="+19"/>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
@@ -6444,12 +6439,7 @@ for example: alertnotify=echo %%s | mail -s &quot;ELLI Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Copyright (C) 2017-%i The ELLI Core Developers</source>
+        <source>Copyright (C) 2015-%i The PIVX Core developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

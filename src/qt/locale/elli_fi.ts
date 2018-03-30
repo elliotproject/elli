@@ -2230,7 +2230,7 @@ Please check the address and try again.</source>
         <translation>Dash Core kehittäjät</translation>
     </message>
     <message>
-        <source>The ELLI Core developers</source>
+        <source>The PIVX Core developers</source>
         <translation>ELLI core kehittäjät</translation>
     </message>
     <message>

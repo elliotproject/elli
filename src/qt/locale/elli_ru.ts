@@ -2810,7 +2810,7 @@ https://www.transifex.com/elli-project/elli-project-translations</translation>
         <translation>Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>The ELLI Core developers</source>
+        <source>The PIVX Core developers</source>
         <translation>Разработчики ELLI Core</translation>
     </message>
     <message>
@@ -3103,7 +3103,7 @@ https://www.transifex.com/elli-project/elli-project-translations</translation>
         <translation>Copyright (C) 2014-%i Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The ELLI Core Developers</source>
+        <source>Copyright (C) 2015-%i The PIVX Core developers</source>
         <translation>Copyright (C) 2015-%i Разработчики ELLI Core</translation>
     </message>
     <message>

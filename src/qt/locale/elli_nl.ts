@@ -2377,7 +2377,7 @@ MultiSend: %1</translation>
         <translation>De Dash Core ontwikkelaars</translation>
     </message>
     <message>
-        <source>The ELLI Core developers</source>
+        <source>The PIVX Core developers</source>
         <translation>De ELLI Core ontwikkelaars</translation>
     </message>
     <message>
@@ -2802,7 +2802,7 @@ MultiSend: %1</translation>
         <translation>Copyright (C) 2014-%i The Dash Core Ontwikkelaars</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The ELLI Core Developers</source>
+        <source>Copyright (C) 2015-%i The PIVX Core developers</source>
         <translation>Copyright (C) 2015-%i The ELLI Core Ontwikkelaars</translation>
     </message>
     <message>
