@@ -229,31 +229,33 @@ public:
 
         vAlertPubKey = ParseHex("047f34248d7717fee995f669ad25fa457ca1c6ef6052989083a25d3f47c2aa3f6cd815b7c4db3254d6a51a1a6dc4691c29f50e37355eb10bbec2fad2c2145366ce");
         nDefaultPort = 61319;
-        nEnforceBlockUpgradeMajority = 51;
-        nRejectBlockOutdatedMajority = 75;
-        nToCheckBlockUpgradeMajority = 100;
+
+        //nEnforceBlockUpgradeMajority = 51;
+        //nRejectBlockOutdatedMajority = 75;
+        //nToCheckBlockUpgradeMajority = 100;
+
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // ELLI: 1 day
         nTargetSpacing = 1 * 60;  // ELLI: 1 minute
         nLastPOWBlock = 200;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
-        nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
-        nMaxMoneyOut = 43199500 * COIN;
-        nZerocoinStartHeight = 201576;
-        nZerocoinStartTime = 1501776000;
+        nModifierUpdateBlock = 1; //approx Mon, 17 Apr 2017 04:00:00 GMT
+        nMaxMoneyOut = 43349500 * COIN;
+        nZerocoinStartHeight = nLastPOWBlock+10;
+        nZerocoinStartTime = 1506779240+nZerocoinStartHeight*nTargetSpacing;
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
-        nBlockRecalculateAccumulators = 9908000; //Trigger a recalculation of accumulators
-        nBlockFirstFraudulent = 9891737; //First block that bad serials emerged
-        nBlockLastGoodCheckpoint = 9891730; //Last valid accumulator checkpoint
-        nBlockEnforceInvalidUTXO = 9902850; //Start enforcing the invalid UTXO's
+        nBlockRecalculateAccumulators = nZerocoinStartHeight*2; //Trigger a recalculation of accumulators
+        nBlockFirstFraudulent = nZerocoinStartHeight*2; //First block that bad serials emerged
+        nBlockLastGoodCheckpoint = nZerocoinStartHeight*2; //Last valid accumulator checkpoint
+        nBlockEnforceInvalidUTXO = nZerocoinStartHeight*2; //Start enforcing the invalid UTXO's
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1506779240;
         genesis.nNonce = 21239210;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000041e482b9b9691d98eefb48473405c0b8ec31b76df3797c74a78680ef818"));
+        assert(hashGenesisBlock == uint256("0x00000e7937187bfd70d1ddf74ad78dc864894402d4a223aaa44ae85535177519"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -317,9 +319,11 @@ public:
         pchMessageStart[3] = 0x6c;
 
         nSubsidyHalvingInterval = 150;
+
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
+
         nMinerThreads = 1;
         nTargetTimespan = 24 * 60 * 60; // ELLI: 1 day
         nTargetSpacing = 1 * 60;        // ELLI: 1 minutes
