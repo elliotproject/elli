@@ -1,54 +1,54 @@
 ELLI Core integration/staging repository
 =====================================
 
-ELLI is an open source crypto-currency focused on fast private transactions with low transaction fees & environmental footprint.  It utilizes a custom Proof of Stake protocol for securing its network and uses an innovative variable seesaw reward mechanism that dynamically balances 90% of its block reward size between masternodes and staking nodes and 10% dedicated for budget proposals. The goal of ELLI is to achieve a decentralized sustainable crypto currency with near instant full-time private transactions, fair governance and community intelligence.
-- Anonymized transactions using the [_Zerocoin Protocol_](http://www.elli.org/zelli).
-- Fast transactions featuring guaranteed zero confirmation transactions, we call it _SwiftX_.
-- Decentralized blockchain voting utilizing Masternode technology to form a DAO. The blockchain will distribute monthly treasury funds based on successful proposals submitted by the community and voted on by the DAO.
+ELLI is an opensource cryptocurrency specialized on fast transactions with low transaction fees and very high security and anonymity level.
+It is using variable seesaw reward mechanism that dynamically balances the block reward between Masternodes and Staking nodes on PoS stage.
+ELLI aims to be a reliable fast universal cryptocurrency with maximum possible anonymity and security level, which will be used in parallel developed mobile multiplatform game as an instrument of payment.
+- Doubled anonymity of transactions using the [_Zerocoin Protocol_](https://en.wikipedia.org/wiki/Zerocoin) and [_Tor_](https://www.torproject.org/) (upcoming update).
+- Fulminant transactions requiring zero confirmation (_SwiftX_ technology).
 
-More information at [elli.org](http://www.elli.org) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org)
+More information at [elliotproject.org](https://elliotproject.org)
+and visit our ANN thread at [BitcoinTalk](https://www.bitcointalk.org)
 
 ### Coin Specs
 <table>
-<tr><td>Algo</td><td>Quark</td></tr>
+<tr><td>Algo</td><td>Lyra2z</td></tr>
 <tr><td>Block Time</td><td>60 Seconds</td></tr>
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
-<tr><td>Max Coin Supply (PoW Phase)</td><td>43,199,500 ELLI</td></tr>
+<tr><td>Max Coin Supply (PoW Phase)</td><td>43,229,500 ELLI</td></tr>
 <tr><td>Max Coin Supply (PoS Phase)</td><td>Infinite</td></tr>
-<tr><td>Premine</td><td>60,000 ELLI*</td></tr>
+<tr><td>Premine</td><td>0.2% (90 kELLI)</td></tr>
 </table>
-
-*60,000 ELLI Premine was burned in block [279917](http://www.presstab.pw/phpexplorer/ELLI/block.php?blockhash=206d9cfe859798a0b0898ab00d7300be94de0f5469bb446cecb41c3e173a57e0)
 
 ### Reward Distribution
 
 <table>
 <th colspan=4>Genesis Block</th>
-<tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th></tr>
-<tr><td>1</td><td>60,000 ELLI</td><td>Initial Pre-mine, burnt in block <a href="http://www.presstab.pw/phpexplorer/ELLI/block.php?blockhash=206d9cfe859798a0b0898ab00d7300be94de0f5469bb446cecb41c3e173a57e0">279917</a></td></tr>
+<tr><th>Block Height</th><th>Reward Amount</th></tr>
+<tr><td>1</td><td>90,000 ELLI</td></tr>
 </table>
 
 ### PoW Rewards Breakdown
 
 <table>
 <th>Block Height</th><th>Masternodes</th><th>Miner</th><th>Budget</th>
-<tr><td>2-43200</td><td>20% (50 ELLI)</td><td>80% (200 ELLI)</td><td>N/A</td></tr>
-<tr><td>43201-151200</td><td>20% (50 ELLI)</td><td>70% (200 ELLI)</td><td>10% (25 ELLI)</td></tr>
-<tr><td>151201-259200</td><td>45% (22.5 ELLI)</td><td>45% (22.5 ELLI)</td><td>10% (5 ELLI)</td></tr>
+<tr><td>2-43200</td><td>40% (62.5 ELLI)</td><td>60% (93.5 ELLI)</td><td>0% (0 ELLI)</td></tr>
+<tr><td>43201-151200</td><td>50% (62.5 ELLI)</td><td>50% (62.5 ELLI)</td><td>0% (0 ELLI)</td></tr>
+<tr><td>151201-259200</td><td>50% (22.5 ELLI)</td><td>50% (22.5 ELLI)</td><td>0% (0 ELLI)</td></tr>
 </table>
 
 ### PoS Rewards Breakdown
 
 <table>
-<th>Phase</th><th>Block Height</th><th>Reward</th><th>Masternodes & Stakers</th><th>Budget</th>
-<tr><td>Phase 1</td><td>259201-302399</td><td>50 ELLI</td><td>90% (45 ELLI)</td><td>10% (5 ELLI)</td></tr>
-<tr><td>Phase 2</td><td>302400-345599</td><td>45 ELLI</td><td>90% (40.5 ELLI)</td><td>10% (4.5 ELLI)</td></tr>
-<tr><td>Phase 3</td><td>345600-388799</td><td>40 ELLI</td><td>90% (36 ELLI)</td><td>10% (4 ELLI)</td></tr>
-<tr><td>Phase 4</td><td>388800-431999</td><td>35 ELLI</td><td>90% (31.5 ELLI)</td><td>10% (3.5 ELLI)</td></tr>
-<tr><td>Phase 5</td><td>432000-475199</td><td>30 ELLI</td><td>90% (27 ELLI)</td><td>10% (3 ELLI)</td></tr>
-<tr><td>Phase 6</td><td>475200-518399</td><td>25 ELLI</td><td>90% (22.5 ELLI)</td><td>10% (2.5 ELLI)</td></tr>
-<tr><td>Phase 7</td><td>518400-561599</td><td>20 ELLI</td><td>90% (18 ELLI)</td><td>10% (2 ELLI)</td></tr>
-<tr><td>Phase 8</td><td>561600-604799</td><td>15 ELLI</td><td>90% (13.5 ELLI)</td><td>10% (1.5 ELLI)</td></tr>
-<tr><td>Phase 9</td><td>604800-647999</td><td>10 ELLI</td><td>90% (9 ELLI)</td><td>10% (1 ELLI)</td></tr>
-<tr><td>Phase X</td><td>648000-Infinite</td><td>5 ELLI</td><td>90% (4.5 ELLI)</td><td>10% (0.5 ELLI)</td></tr>
+<th>Stage</th><th>Block Height</th><th>Reward</th><th>Masternodes & Stakers</th><th>Budget</th>
+<tr><td>Stage 1</td><td>259201-302399</td><td>50 ELLI</td><td>90% (45 ELLI)</td><td>10% (5 ELLI)</td></tr>
+<tr><td>Stage 2</td><td>302400-345599</td><td>45 ELLI</td><td>90% (40.5 ELLI)</td><td>10% (4.5 ELLI)</td></tr>
+<tr><td>Stage 3</td><td>345600-388799</td><td>40 ELLI</td><td>90% (36 ELLI)</td><td>10% (4 ELLI)</td></tr>
+<tr><td>Stage 4</td><td>388800-431999</td><td>35 ELLI</td><td>90% (31.5 ELLI)</td><td>10% (3.5 ELLI)</td></tr>
+<tr><td>Stage 5</td><td>432000-475199</td><td>30 ELLI</td><td>90% (27 ELLI)</td><td>10% (3 ELLI)</td></tr>
+<tr><td>Stage 6</td><td>475200-518399</td><td>25 ELLI</td><td>90% (22.5 ELLI)</td><td>10% (2.5 ELLI)</td></tr>
+<tr><td>Stage 7</td><td>518400-561599</td><td>20 ELLI</td><td>90% (18 ELLI)</td><td>10% (2 ELLI)</td></tr>
+<tr><td>Stage 8</td><td>561600-604799</td><td>15 ELLI</td><td>90% (13.5 ELLI)</td><td>10% (1.5 ELLI)</td></tr>
+<tr><td>Stage 9</td><td>604800-647999</td><td>10 ELLI</td><td>90% (9 ELLI)</td><td>10% (1 ELLI)</td></tr>
+<tr><td>Stage X</td><td>648000-Infinite</td><td>5 ELLI</td><td>90% (4.5 ELLI)</td><td>10% (0.5 ELLI)</td></tr>
 </table>

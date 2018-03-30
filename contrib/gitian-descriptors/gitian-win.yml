@@ -22,7 +22,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/elli-project/elli.git"
+- "url": "https://github.com/elliotproject/elli.git"
   "dir": "elli"
 files: []
 script: |

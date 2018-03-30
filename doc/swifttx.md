@@ -12,8 +12,8 @@ When a "Transaction Lock" occurs the hash of the related transaction is broadcas
 * `zmqpubhashtxlock`: publishes the transaction hash when locked via SwiftX
 
 This mechanism has been integrated into Bitcore-Node-ELLI which allows for notification to be broadcast through Insight API in one of two ways:
-* WebSocket: [https://github.com/ELLI-Project/insight-api-elli#web-socket-api](https://github.com/ELLI-Project/insight-api-elli#web-socket-api) 
-* API: [https://github.com/ELLI-Project/insight-api-elli#swifttx-transactions](https://github.com/ELLI-Project/insight-api-elli#swifttx-transactions) 
+* WebSocket: [https://github.com/elliotproject/insight-api-elli#web-socket-api](https://github.com/elliotproject/insight-api-elli#web-socket-api) 
+* API: [https://github.com/elliotproject/insight-api-elli#swifttx-transactions](https://github.com/elliotproject/insight-api-elli#swifttx-transactions) 
 
 ####Command line option
 

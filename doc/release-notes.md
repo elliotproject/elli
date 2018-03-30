@@ -2,14 +2,14 @@
 
 ELLI Core version *version* is now available from:
 
-  <https://github.com/elli-project/elli/releases>
+  <https://github.com/elliotproject/elli/releases>
 
 This is a new major version release, including various bug fixes and
 performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/elli-project/elli/issues>
+  <https://github.com/elliotproject/elli/issues>
 
 Mandatory Update
 ==============

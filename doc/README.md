@@ -3,7 +3,7 @@ ELLI Core
 
 Setup
 ---------------------
-[ELLI Core](http://elli.org/wallet) is the original ELLI client and it builds the backbone of the network. However, it downloads and stores the entire history of ELLI transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[ELLI Core](https://elliotproject.org/wallet) is the original ELLI client and it builds the backbone of the network. However, it downloads and stores the entire history of ELLI transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
@@ -28,9 +28,8 @@ Drag ELLI-Qt to your applications folder, and then run ELLI-Qt.
 
 * See the documentation at the [ELLI Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [ELLI Forum](http://forum.elli.org/).
-* Join our Discord server [Discord Server](https://discord.elli.org)
-* Join one of our Slack groups [ELLI Slack Groups](https://elli.org/slack-logins/) (Main community is replaced by Discord).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/).
+* Join our Discord server [Discord Server](https://discord.gg/cE4Nefv).
 
 Building
 ---------------------
@@ -56,7 +55,7 @@ The Elli repo's [root README](https://github.com/elliotproject/elli/blob/master/
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [ELLI](http://forum.elli.org/) forum.
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [ELLI](http://forum.elliotproject.org/) forum.
 * Join the [ELLI-Dev](https://elli-dev.slack.com/) Slack group ([Sign-Up](https://elli-dev.herokuapp.com/)).
 
 ### Miscellaneous

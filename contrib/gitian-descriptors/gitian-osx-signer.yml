@@ -7,7 +7,7 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/elli-project/elli-detached-sigs.git"
+- "url": "https://github.com/elliotproject/elli-detached-sigs.git"
   "dir": "signature"
 files:
 - "elli-osx-unsigned.tar.gz"

@@ -51,7 +51,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 35
 
 #define QAPP_ORG_NAME "ELLI"
-#define QAPP_ORG_DOMAIN "elli.org"
+#define QAPP_ORG_DOMAIN "elliotproject.org"
 #define QAPP_APP_NAME_DEFAULT "ELLI-Qt"
 #define QAPP_APP_NAME_TESTNET "ELLI-Qt-testnet"
 

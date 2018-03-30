@@ -22,7 +22,7 @@ Build-Depends: debhelper,
  libqrencode-dev,
  libprotobuf-dev, protobuf-compiler
 Standards-Version: 3.9.2
-Homepage: http://www.elli.org
+Homepage: https://www.elliotproject.org
 Vcs-Git: git://github.com/elliotproject/elli.git
 Vcs-Browser: http://github.com/elliotproject/elli
 

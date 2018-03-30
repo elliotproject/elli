@@ -28,7 +28,7 @@ packages:
 - "python-setuptools"
 - "fonts-tuffy"
 remotes:
-- "url": "https://github.com/elli-project/elli.git"
+- "url": "https://github.com/elliotproject/elli.git"
   "dir": "elli"
 files:
 - "MacOSX10.11.sdk.tar.gz"
