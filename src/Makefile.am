@@ -294,7 +294,6 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/cubehash.c \
   crypto/shavite.c \
   crypto/shabal.c \
-  crypto/sph_md_helper.c \
   crypto/simd.c \
   crypto/echo.c \
   crypto/whirlpool.c \
