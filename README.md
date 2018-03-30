@@ -1,8 +1,6 @@
 ELLI Core integration/staging repository
 =====================================
 
-[![Build Status](https://travis-ci.org/elliotproject/elli.svg?branch=master)](https://travis-ci.org/elliotproject/elli)
-
 ELLI is an opensource cryptocurrency specialized on fast transactions with low transaction fees and very high security and anonymity level.
 It is using variable seesaw reward mechanism that dynamically balances the block reward between Masternodes and Staking nodes on PoS stage.
 ELLI aims to be a reliable fast universal cryptocurrency with maximum possible anonymity and security level, which will be used in parallel developed mobile multiplatform game as an instrument of payment.
