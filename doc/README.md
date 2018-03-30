@@ -55,8 +55,7 @@ The Elli repo's [root README](https://github.com/elliotproject/elli/blob/master/
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [ELLI](http://forum.elliotproject.org/) forum.
-* Join the [ELLI-Dev](https://elli-dev.slack.com/) Slack group ([Sign-Up](https://elli-dev.herokuapp.com/)).
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/) or the [ELLI Discord](https://discord.gg/cE4Nefv).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

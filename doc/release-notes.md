@@ -89,6 +89,3 @@ Credits
 =======
 
 Thanks to everyone who directly contributed to this release:
-
-
-As well as everyone that helped translating on [Transifex](https://www.transifex.com/projects/p/elli-project-translations/).

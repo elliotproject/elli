@@ -408,6 +408,6 @@ Uploading signatures (not yet implemented)
 ---------------------
 
 In the future it will be possible to push your signatures (both the `.assert` and `.assert.sig` files) to the
-[elli/gitian.sigs](https://github.com/elli-crypto/gitian.sigs/) repository, or if that's not possible to create a pull
+[elli/gitian.sigs](https://github.com/elliotproject/gitian.sigs/) repository, or if that's not possible to create a pull
 request.
 There will be an official announcement when this repository is online.
