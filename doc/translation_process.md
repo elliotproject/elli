@@ -75,6 +75,6 @@ To create a new language template, you will need to edit the languages manifest 
 **Note:** that the language translation file **must end in `.qm`** (the compiled extension), and not `.ts`.
 
 ### Questions and general assistance
-The ELLI Core translation maintainers include *Fuzzbawls and s3v3nh4cks*. You can find them, and others, in the [ELLI Discord](https://discord.elliotproject.org).
+You can find the ELLI Core translation maintainers, and others, in the [ELLI Discord](https://discord.gg/cE4Nefv).
 
 Announcements will be posted during application pre-releases to notify translators to check for updates.
