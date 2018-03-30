@@ -6,11 +6,7 @@ The following is a list of assets used in the bitcoin source and their proper at
 * License: MIT
 
 ### Assets Used
-	src/qt/res/icons/clock*.png, src/qt/res/icons/tx*.png,
-	src/qt/res/src/clock_green.svg, src/qt/res/src/clock1.svg,
-	src/qt/res/src/clock2.svg, src/qt/res/src/clock3.svg,
-	src/qt/res/src/clock4.svg, src/qt/res/src/clock5.svg,
-	src/qt/res/src/inout.svg, src/qt/res/src/questionmark.svg
+	src/qt/res/icons/clock*.png, src/qt/res/icons/tx*.png
 
 [David Vignoni](http://www.icon-king.com)
 -----------------------
@@ -97,7 +93,7 @@ Jonas Schnelli
 * License: MIT
 
 ### Assets Used
-	src/qt/res/icons/bitcoin.icns, src/qt/res/src/bitcoin.svg,
+	src/qt/res/icons/bitcoin.icns,
 	src/qt/res/src/bitcoin.ico, src/qt/res/src/bitcoin.png,
 	src/qt/res/src/bitcoin_testnet.png, docs/bitcoin_logo_doxygen.png,
 	src/qt/res/images/splash.png, src/qt/res/images/splash_testnet.png
