@@ -18,7 +18,7 @@ and visit our ANN thread at [BitcoinTalk](https://bitcointalk.org)
 <tr><td>Block Time</td><td>60 Seconds</td></tr>
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
 <tr><td>PoS Reward Retargeting</td><td>SeeSaw</td></tr>
-<tr><td>Difficulty Retargeting Algo</td><td>DarkGravity</td></tr>
+<tr><td>Difficulty Retargeting Algo</td><td>DarkGravity v3</td></tr>
 <tr><td>Transaction Security Algo</td><td>Zerocoin</td></tr>
 <tr><td>Max Coin Supply (PoW Phase)</td><td>43,349,500 ELLI</td></tr>
 <tr><td>Max Coin Supply (PoS Phase)</td><td>Infinite</td></tr>
