@@ -1,0 +1,11 @@
+[Protocol]
+exec=elli-qt '%u'
+protocol=elli
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

@@ -31,9 +31,9 @@ SendCoinsEntry::SendCoinsEntry(QWidget* parent) : QStackedWidget(parent),
     ui->addAsLabel->setPlaceholderText(tr("Enter a label for this address to add it to your address book"));
 #endif
 
-    // normal pivx address field
+    // normal elli address field
     GUIUtil::setupAddressWidget(ui->payTo, this);
-    // just a label for displaying pivx address(es)
+    // just a label for displaying elli address(es)
     ui->payTo_is->setFont(GUIUtil::bitcoinAddressFont());
 
     // Connect signals

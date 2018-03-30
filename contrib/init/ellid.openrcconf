@@ -1,0 +1,26 @@
+# /etc/conf.d/ellid: config file for /etc/init.d/ellid
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/elli/elli.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/ellid"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/ellid.pid"
+
+# Where to write ellid data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/ellid"
+
+# User and group to own ellid process
+#BITCOIND_USER="elli"
+#BITCOIND_GROUP="elli"
+
+# Path to ellid executable
+#BITCOIND_BIN="/usr/bin/ellid"
+
+# Nice value to run ellid under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

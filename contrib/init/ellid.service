@@ -1,0 +1,26 @@
+[Unit]
+Description=ELLI's distributed currency daemon
+After=network.target
+
+[Service]
+User=elli
+Group=elli
+
+Type=forking
+PIDFile=/var/lib/ellid/ellid.pid
+
+ExecStart=/usr/bin/ellid -daemon -pid=/var/lib/ellid/ellid.pid \
+          -conf=/etc/elli/elli.conf -datadir=/var/lib/ellid
+
+ExecStop=-/usr/bin/elli-cli -conf=/etc/elli/elli.conf \
+         -datadir=/var/lib/ellid stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

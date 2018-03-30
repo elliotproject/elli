@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=ELLI
+Comment=ELLI P2P Cryptocurrency
+Comment[fr]=ELLI, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=ELLI, eşten eşe kriptografik sanal para birimi
+Exec=elli-qt %u
+Terminal=false
+Type=Application
+Icon=elli128
+MimeType=x-scheme-handler/elli;
+Categories=Office;Finance;

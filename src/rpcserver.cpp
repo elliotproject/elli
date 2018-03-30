@@ -263,11 +263,11 @@ UniValue stop(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop PIVX server.");
+            "\nStop ELLI server.");
     // Event loop will exit after current HTTP requests have been handled, so
     // this reply will get back to the client.
     StartShutdown();
-    return "PIVX server stopping";
+    return "ELLI server stopping";
 }
 
 
@@ -351,36 +351,36 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "reconsiderblock", &reconsiderblock, true, true, false},
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
-        /* PIVX features */
-        {"pivx", "masternode", &masternode, true, true, false},
-        {"pivx", "listmasternodes", &listmasternodes, true, true, false},
-        {"pivx", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"pivx", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"pivx", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"pivx", "masternodedebug", &masternodedebug, true, true, false},
-        {"pivx", "startmasternode", &startmasternode, true, true, false},
-        {"pivx", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"pivx", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"pivx", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"pivx", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"pivx", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"pivx", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"pivx", "mnbudget", &mnbudget, true, true, false},
-        {"pivx", "preparebudget", &preparebudget, true, true, false},
-        {"pivx", "submitbudget", &submitbudget, true, true, false},
-        {"pivx", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"pivx", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"pivx", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"pivx", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"pivx", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"pivx", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"pivx", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"pivx", "checkbudgets", &checkbudgets, true, true, false},
-        {"pivx", "mnsync", &mnsync, true, true, false},
-        {"pivx", "spork", &spork, true, true, false},
-        {"pivx", "getpoolinfo", &getpoolinfo, true, true, false},
+        /* ELLI features */
+        {"elli", "masternode", &masternode, true, true, false},
+        {"elli", "listmasternodes", &listmasternodes, true, true, false},
+        {"elli", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"elli", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"elli", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"elli", "masternodedebug", &masternodedebug, true, true, false},
+        {"elli", "startmasternode", &startmasternode, true, true, false},
+        {"elli", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"elli", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"elli", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"elli", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"elli", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"elli", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"elli", "mnbudget", &mnbudget, true, true, false},
+        {"elli", "preparebudget", &preparebudget, true, true, false},
+        {"elli", "submitbudget", &submitbudget, true, true, false},
+        {"elli", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"elli", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"elli", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"elli", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"elli", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"elli", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"elli", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"elli", "checkbudgets", &checkbudgets, true, true, false},
+        {"elli", "mnsync", &mnsync, true, true, false},
+        {"elli", "spork", &spork, true, true, false},
+        {"elli", "getpoolinfo", &getpoolinfo, true, true, false},
 #ifdef ENABLE_WALLET
-        {"pivx", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
+        {"elli", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
 
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
@@ -607,7 +607,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> pivx-cli " + methodname + " " + args + "\n";
+    return "> elli-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)
