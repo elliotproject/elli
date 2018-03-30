@@ -133,6 +133,7 @@ HEADERS += src/activemasternode.h \
            src/compat/sanity.h \
            src/config/elli-config.h \
            src/crypto/common.h \
+		   src/crypto/scrypt.h \
            src/crypto/hmac_sha256.h \
            src/crypto/hmac_sha512.h \
            src/crypto/rfc6979_hmac_sha256.h \
@@ -145,6 +146,12 @@ HEADERS += src/activemasternode.h \
            src/crypto/sph_cubehash.h \
            src/crypto/sph_echo.h \
            src/crypto/sph_groestl.h \
+		   src/crypto/sph_haval.h \
+		   src/crypto/sph_sha2.h \
+		   src/crypto/sph_whirlpool.h \
+		   src/crypto/sph_shabal.h \
+		   src/crypto/sph_fugue.h \
+		   src/crypto/sph_hamsi.h \
            src/crypto/sph_jh.h \
            src/crypto/sph_keccak.h \
            src/crypto/sph_luffa.h \
@@ -434,12 +441,18 @@ SOURCES += src/activemasternode.cpp \
            src/compat/glibcxx_compat.cpp \
            src/compat/glibcxx_sanity.cpp \
            src/compat/strnlen.cpp \
+		   src/crypto/scrypt.cpp \
            src/crypto/aes_helper.c \
            src/crypto/blake.c \
            src/crypto/bmw.c \
            src/crypto/cubehash.c \
            src/crypto/echo.c \
            src/crypto/groestl.c \
+		   src/crypto/fugue.c \
+		   src/crypto/hamsi.c \
+		   src/crypto/haval.c \
+		   src/crypto/sha2.c \
+		   src/crypto/shabal.c \
            src/crypto/hmac_sha256.cpp \
            src/crypto/hmac_sha512.cpp \
            src/crypto/jh.c \
@@ -453,6 +466,8 @@ SOURCES += src/activemasternode.cpp \
            src/crypto/shavite.c \
            src/crypto/simd.c \
            src/crypto/skein.c \
+		   src/crypto/whirlpool.c \
+		   src/crypto/sph_sha2big.c \
            src/json/json_spirit_reader.cpp \
            src/json/json_spirit_value.cpp \
            src/json/json_spirit_writer.cpp \
