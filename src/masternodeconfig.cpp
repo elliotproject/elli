@@ -60,15 +60,25 @@ bool CMasternodeConfig::read(std::string& strErr)
             }
         }
 
+        int port = 0;
+        std::string hostname = "";
+        SplitHostPort(ip, port, hostname);
+        if(port == 0 || hostname == "") {
+            strErr = _("Failed to parse host:port string") + "\n"+
+                    strprintf(_("Line: %d"), linenumber) + "\n\"" + line + "\"";
+            streamConfig.close();
+            return false;
+        }
+
         if (Params().NetworkID() == CBaseChainParams::MAIN) {
-            if (CService(ip).GetPort() != 61317) {
-                strErr = _("Invalid port detected in masternode.conf") + "\n" + strprintf(_("Port: %d"), CService(ip).GetPort()) + "\n"
+            if (port != 61317) {
+                strErr = _("Invalid port detected in masternode.conf") + "\n" + strprintf(_("Port: %d"), port) + "\n"
                          strprintf(_("Line: %d"), linenumber) + "\n\"" + line + "\"" + "\n" +
                          _("(must be 61317 for mainnet)");
                 streamConfig.close();
                 return false;
             }
-        } else if (CService(ip).GetPort() == 61317) {
+        } else if (port == 61317) {
             strErr = _("Invalid port detected in masternode.conf") + "\n" +
                      strprintf(_("Line: %d"), linenumber) + "\n\"" + line + "\"" + "\n" +
                      _("(61317 could be used only on mainnet)");
