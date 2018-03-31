@@ -209,8 +209,8 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
         nWatchOnlyLockedBalance = pwalletMain->GetLockedWatchOnlyBalance();
     }
     // ELLI Balance
-    CAmount nTotalBalance = balance + unconfirmedBalance;
-    CAmount elliAvailableBalance = balance - immatureBalance - nLockedBalance;
+    CAmount nTotalBalance = balance + unconfirmedBalance + immatureBalance + nLockedBalance;
+    CAmount elliAvailableBalance = balance;
     CAmount nTotalWatchBalance = watchOnlyBalance + watchUnconfBalance + watchImmatureBalance;    
     CAmount nUnlockedBalance = nTotalBalance - nLockedBalance;
     // zELLI Balance
