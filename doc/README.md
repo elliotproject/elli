@@ -28,7 +28,7 @@ Drag ELLI-Qt to your applications folder, and then run ELLI-Qt.
 
 * See the documentation at the [ELLI Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=3229671).
 * Join our Discord server [Discord Server](https://discord.gg/cE4Nefv).
 
 Building
@@ -55,7 +55,7 @@ The Elli repo's [root README](https://github.com/elliotproject/elli/blob/master/
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org) or the [ELLI Discord](https://discord.gg/cE4Nefv).
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=3229671) or the [ELLI Discord](https://discord.gg/cE4Nefv).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

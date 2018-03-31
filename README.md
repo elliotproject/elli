@@ -10,7 +10,7 @@ ELLI aims to be a reliable fast universal cryptocurrency with maximum possible a
 - Fulminant transactions requiring zero confirmation (_SwiftX_ technology).
 
 More information at [elliotproject.org](https://elliotproject.org)
-and visit our ANN thread at [BitcoinTalk](https://bitcointalk.org)
+and visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=3229671)
 
 ### Coin Specs
 <table>
