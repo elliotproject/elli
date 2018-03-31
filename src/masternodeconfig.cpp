@@ -64,7 +64,7 @@ bool CMasternodeConfig::read(std::string& strErr)
         std::string hostname = "";
         SplitHostPort(ip, port, hostname);
         if(port == 0 || hostname == "") {
-            strErr = _("Failed to parse host:port string") + "\n"+
+            strErr = _("Failed to parse host:port string") + "\n" +
                     strprintf(_("Line: %d"), linenumber) + "\n\"" + line + "\"";
             streamConfig.close();
             return false;
@@ -72,7 +72,7 @@ bool CMasternodeConfig::read(std::string& strErr)
 
         if (Params().NetworkID() == CBaseChainParams::MAIN) {
             if (port != 61317) {
-                strErr = _("Invalid port detected in masternode.conf") + "\n" + strprintf(_("Port: %d"), port) + "\n"
+                strErr = _("Invalid port detected in masternode.conf") + "\n" + strprintf(_("Port: %d"), port) + "\n" +
                          strprintf(_("Line: %d"), linenumber) + "\n\"" + line + "\"" + "\n" +
                          _("(must be 61317 for mainnet)");
                 streamConfig.close();
