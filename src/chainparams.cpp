@@ -155,16 +155,16 @@ public:
         assert(hashGenesisBlock == uint256("0x00000f6e56ba23a2261deb7b48617f009c0055a1c928fe1c35d86115d6f433be"));
         assert(genesis.hashMerkleRoot == uint256("0x971623112a13e4c15b38e9293e415de9cc80cbbb323385b87f9e30814e893b9d"));
 
-        vSeeds.push_back(CDNSSeedData("alpha.elliotproject.org", "alpha.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("bravo.elliotproject.org", "bravo.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("charlie.elliotproject.org", "charlie.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("delta.elliotproject.org", "delta.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("echo.elliotproject.org", "echo.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("foxtrot.elliotproject.org", "foxtrot.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("golf.elliotproject.org", "golf.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("hotel.elliotproject.org", "hotel.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("alpha.elliotproject.org",    "alpha.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("bravo.elliotproject.org",    "bravo.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("charlie.elliotproject.org",  "charlie.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("delta.elliotproject.org",    "delta.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("echo.elliotproject.org",     "echo.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("foxtrot.elliotproject.org",  "foxtrot.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("golf.elliotproject.org",     "golf.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("hotel.elliotproject.org",    "hotel.elliotproject.org"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 30);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 33); // starts with E
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 212);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x25)(0x33).convert_to_container<std::vector<unsigned char> >();
@@ -185,8 +185,8 @@ public:
 
         nPoolMaxTransactions = 3;
         strSporkKey = "04e5cd2be07aeb58fbc6f4bfbcf19dedb263a1bad4b3da794c751ed251ef12a30e73081ceeea4d440ef2929becf36fdc821b1942926ced251de5b244d91b67c6ba";
-        strObfuscationPoolDummyAddress = "D87q2gC9j6nNrnzCsg4aY6bHMLsT9nUhEw";
-        nStartMasternodePayments = 1403728576; //Wed, 25 Jun 2014 20:36:16 GMT
+        strObfuscationPoolDummyAddress = "EQ37iidUyFaY3ozZRrQCth1zP3hhys52Py";
+        nStartMasternodePayments = 1522479067;
 
         /** Zerocoin */
         zerocoinModulus = "25195908475657893494027183240048398571429282126204032027777137836043662020707595556264018525880784"
@@ -241,7 +241,7 @@ public:
         nMaturity = 15;
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 1; //approx Mon, 17 Apr 2017 04:00:00 GMT
-        nMaxMoneyOut = 43349500 * COIN;
+        nMaxMoneyOut = 21000000 * COIN;
         nZerocoinStartHeight = nLastPOWBlock+10;
         nZerocoinStartTime = 1506779240+nZerocoinStartHeight*nTargetSpacing;
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
@@ -259,14 +259,15 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("alpha.elliotproject.org", "alpha.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("bravo.elliotproject.org", "bravo.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("charlie.elliotproject.org", "charlie.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("delta.elliotproject.org", "delta.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("echo.elliotproject.org", "echo.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("foxtrot.elliotproject.org", "foxtrot.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("golf.elliotproject.org", "golf.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("hotel.elliotproject.org", "hotel.elliotproject.org"));
+
+        vSeeds.push_back(CDNSSeedData("alpha.elliotproject.org",    "alpha.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("bravo.elliotproject.org",    "bravo.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("charlie.elliotproject.org",  "charlie.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("delta.elliotproject.org",    "delta.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("echo.elliotproject.org",     "echo.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("foxtrot.elliotproject.org",  "foxtrot.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("golf.elliotproject.org",     "golf.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("hotel.elliotproject.org",    "hotel.elliotproject.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet elli addresses start with 'x' or 'y'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet elli script addresses start with '8' or '9'
@@ -290,7 +291,7 @@ public:
         nPoolMaxTransactions = 2;
         strSporkKey = "04c30650c2f5681f3e487c89fa7e88576a064a6007145c4726769b79492c7c4c87b7852abf67fe0c952b9f81e45a422b23b4a9d0805e18d126473ae5499e84206a";
         strObfuscationPoolDummyAddress = "y57cqfGRkekRyDRNeJiLtYVEbvhXrNbmox";
-        nStartMasternodePayments = 1420837558; //Fri, 09 Jan 2015 21:05:58 GMT
+        nStartMasternodePayments = 1522479068; 
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
                                        // here because we only have a 8 block finalization window on testnet
     }
@@ -320,9 +321,9 @@ public:
 
         nSubsidyHalvingInterval = 150;
 
-        nEnforceBlockUpgradeMajority = 750;
-        nRejectBlockOutdatedMajority = 950;
-        nToCheckBlockUpgradeMajority = 1000;
+        //nEnforceBlockUpgradeMajority = 750;
+        //nRejectBlockOutdatedMajority = 950;
+        //nToCheckBlockUpgradeMajority = 1000;
 
         nMinerThreads = 1;
         nTargetTimespan = 24 * 60 * 60; // ELLI: 1 day

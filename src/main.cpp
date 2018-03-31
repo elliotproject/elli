@@ -2127,13 +2127,13 @@ int64_t GetBlockValue(int nHeight)
     }
 
     if (nHeight == 0) {
-        nSubsidy = 60001 * COIN;
+        nSubsidy = 210000 * COIN;
     } else if (nHeight < 86400 && nHeight > 0) {
-        nSubsidy = 250 * COIN;
+        nSubsidy = 50 * COIN;
     } else if (nHeight < (Params().NetworkID() == CBaseChainParams::TESTNET ? 145000 : 151200) && nHeight >= 86400) {
-        nSubsidy = 225 * COIN;
+        nSubsidy = 50 * COIN;
     } else if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 151200) {
-        nSubsidy = 45 * COIN;
+        nSubsidy = 50 * COIN;
     } else if (nHeight <= 302399 && nHeight > Params().LAST_POW_BLOCK()) {
         nSubsidy = 45 * COIN;
     } else if (nHeight <= 345599 && nHeight >= 302400) {
@@ -2169,14 +2169,16 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
             return 0;
     }
 
-    if (nHeight <= 43200) {
-        ret = blockValue / 5;
+    if (nHeight == 0) {
+        ret = 0 * COIN;
+    } else if (nHeight > 0 && nHeight <= 43200) {
+        ret = blockValue / (100 / 40);
     } else if (nHeight < 86400 && nHeight > 43200) {
-        ret = blockValue / (100 / 30);
+        ret = blockValue / (100 / 50);
     } else if (nHeight < (Params().NetworkID() == CBaseChainParams::TESTNET ? 145000 : 151200) && nHeight >= 86400) {
-        ret = 50 * COIN;
+        ret = blockValue / (100 / 50);
     } else if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 151200) {
-        ret = blockValue / 2;
+        ret = blockValue / (100 / 60);
     } else if (nHeight > Params().LAST_POW_BLOCK()) {
         int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
 

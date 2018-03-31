@@ -10,7 +10,7 @@ cache:
 env:
   global:
     - MAKEJOBS=-j3
-    - RUN_TESTS=true
+    - RUN_TESTS=false
     - CHECK_DOC=0
     - CHECK_LOGPRINT=0
     - BOOST_TEST_RANDOM=1$TRAVIS_BUILD_ID
