@@ -128,7 +128,7 @@ public:
         nLastPOWBlock = 259200;
         nModifierUpdateBlock = 1;
         nZerocoinStartHeight = nLastPOWBlock + 100;
-        nZerocoinStartTime = 1506779239 + nZerocoinStartHeight*nTargetSpacing; 
+        nZerocoinStartTime = 1522479067 + nZerocoinStartHeight*nTargetSpacing; 
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
 
         nBlockRecalculateAccumulators = nZerocoinStartHeight*3; //Trigger a recalculation of accumulators
