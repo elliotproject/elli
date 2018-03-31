@@ -2878,7 +2878,7 @@ https://www.transifex.com/elli-project/elli-project-translations</translation>
     </message>
     <message>
         <source>The PIVX Core developers</source>
-        <translation>Os desenvolvedores do ELLI Core</translation>
+        <translation>Os desenvolvedores do PIVX Core</translation>
     </message>
     <message>
         <source>[testnet]</source>

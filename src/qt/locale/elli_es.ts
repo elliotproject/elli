@@ -3230,7 +3230,7 @@ https://www.transifex.com/elli-project/elli-project-translations</translation>
     </message>
     <message>
         <source>The PIVX Core developers</source>
-        <translation>Los desarrolladores de ELLI Core</translation>
+        <translation>Los desarrolladores de PIVX Core</translation>
     </message>
     <message>
         <source>[testnet]</source>

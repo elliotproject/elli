@@ -3190,7 +3190,7 @@ https://www.transifex.com/elli-project/elli-project-translations</translation>
     </message>
     <message>
         <source>The PIVX Core developers</source>
-        <translation>ELLI "core" udviklerne</translation>
+        <translation>PIVX "core" udviklerne</translation>
     </message>
     <message>
         <source>[testnet]</source>

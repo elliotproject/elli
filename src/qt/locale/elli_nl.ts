@@ -2378,7 +2378,7 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>The PIVX Core developers</source>
-        <translation>De ELLI Core ontwikkelaars</translation>
+        <translation>De PIVX Core ontwikkelaars</translation>
     </message>
     <message>
         <source>[testnet]</source>

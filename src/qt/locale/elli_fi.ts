@@ -2231,7 +2231,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <source>The PIVX Core developers</source>
-        <translation>ELLI core kehittäjät</translation>
+        <translation>PIVX core kehittäjät</translation>
     </message>
     <message>
         <source>[testnet]</source>

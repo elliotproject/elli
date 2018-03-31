@@ -3643,7 +3643,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>The PIVX Core developers</source>
-        <translation>Die ELLI Core Entwickler</translation>
+        <translation>Die PIVX Core Entwickler</translation>
     </message>
     <message>
         <source>[testnet]</source>

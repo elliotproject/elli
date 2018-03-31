@@ -62,7 +62,7 @@ bool CMasternodeConfig::read(std::string& strErr)
 
         if (Params().NetworkID() == CBaseChainParams::MAIN) {
             if (CService(ip).GetPort() != 61317) {
-                strErr = _("Invalid port detected in masternode.conf") + "\n" +
+                strErr = _("Invalid port detected in masternode.conf") + "\n" + strprintf(_("Port: %d"), CService(ip).GetPort()) + "\n"
                          strprintf(_("Line: %d"), linenumber) + "\n\"" + line + "\"" + "\n" +
                          _("(must be 61317 for mainnet)");
                 streamConfig.close();

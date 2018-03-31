@@ -3199,7 +3199,7 @@ https://www.transifex.com/elli-project/elli-project-translations</translation>
     </message>
     <message>
         <source>The PIVX Core developers</source>
-        <translation>ELLI Core 개발자</translation>
+        <translation>PIVX Core 개발자</translation>
     </message>
     <message>
         <source>[testnet]</source>
