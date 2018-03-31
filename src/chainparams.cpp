@@ -53,7 +53,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x00000f6e56ba23a2261deb7b48617f009c0055a1c928fe1c35d86115d6f433be"));
+    (0, uint256("0x000008d83ed83d3c080def52a2d534af4c663522b138ade392572ef0e7feb18e"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1522479067, // * UNIX timestamp of last checkpoint block
@@ -64,7 +64,7 @@ static const Checkpoints::CCheckpointData data = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of
-    (0, uint256("0x000003f1d9fc169320be62706f40406ee99ca52b846e2874926d848fa820abb3"));
+    (0, uint256("0x00000dd89ea8ecc3b47b1d60520120aa23835539b615f16ada62187fa763cb18"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
     1522479068,
@@ -73,7 +73,7 @@ static const Checkpoints::CCheckpointData dataTestnet = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of
-    (0, uint256("0x0302a003b48e897e4ade0f18e1adb00186eccb8e5235f6d3e043e308d103afb2"));
+    (0, uint256("0x56c672f4a3339263e6a5882fa2123f57edfe0b9975d93bc0437ff05a930ba20b"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
     1522479068,
@@ -136,7 +136,7 @@ public:
         nBlockLastGoodCheckpoint = nZerocoinStartHeight*3; //Last valid accumulator checkpoint
         nBlockEnforceInvalidUTXO = nZerocoinStartHeight*3; //Start enforcing the invalid UTXO's
 
-        const char* pszTimestamp = "elliotproject 31-03-2018";
+        const char* pszTimestamp = "elliotproject 31-03-2018 v2";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -149,11 +149,11 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1522479067;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 24745476;
+        genesis.nNonce = 21231226;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000f6e56ba23a2261deb7b48617f009c0055a1c928fe1c35d86115d6f433be"));
-        assert(genesis.hashMerkleRoot == uint256("0x971623112a13e4c15b38e9293e415de9cc80cbbb323385b87f9e30814e893b9d"));
+        assert(hashGenesisBlock == uint256("0x000008d83ed83d3c080def52a2d534af4c663522b138ade392572ef0e7feb18e"));
+        assert(genesis.hashMerkleRoot == uint256("0x90a64b2bbca84a0f4fe84514e83979023c35daacff69b15ab8d4e26c217b0191"));
 
         vSeeds.push_back(CDNSSeedData("alpha.elliotproject.org",    "alpha.elliotproject.org"));
         vSeeds.push_back(CDNSSeedData("bravo.elliotproject.org",    "bravo.elliotproject.org"));
@@ -252,10 +252,10 @@ public:
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1522479068;
-        genesis.nNonce = 20657053;
+        genesis.nNonce = 20800966;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000003f1d9fc169320be62706f40406ee99ca52b846e2874926d848fa820abb3"));
+        assert(hashGenesisBlock == uint256("0x00000dd89ea8ecc3b47b1d60520120aa23835539b615f16ada62187fa763cb18"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -331,11 +331,11 @@ public:
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1522479068;
         genesis.nBits = 0x207fffff;
-        genesis.nNonce = 3;
+        genesis.nNonce = 2;
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 61321;
-        assert(hashGenesisBlock == uint256("0x0302a003b48e897e4ade0f18e1adb00186eccb8e5235f6d3e043e308d103afb2"));
+        assert(hashGenesisBlock == uint256("0x56c672f4a3339263e6a5882fa2123f57edfe0b9975d93bc0437ff05a930ba20b"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
