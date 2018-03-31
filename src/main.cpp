@@ -2172,13 +2172,13 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     if (nHeight == 0) {
         ret = 0 * COIN;
     } else if (nHeight > 0 && nHeight <= 43200) {
-        ret = (100 * blockValue) / 40;
+        ret = (40 * blockValue) / 100;
     } else if (nHeight < 86400 && nHeight > 43200) {
-        ret = (100 * blockValue) / 50;
+        ret = (50 * blockValue) / 100;
     } else if (nHeight < (Params().NetworkID() == CBaseChainParams::TESTNET ? 145000 : 151200) && nHeight >= 86400) {
-        ret = (100 * blockValue) / 50;
+        ret = (50 * blockValue) / 100;
     } else if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 151200) {
-        ret = (100 * blockValue) / 60;
+        ret = (60 * blockValue) / 100;
     } else if (nHeight > Params().LAST_POW_BLOCK()) {
         int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
 
