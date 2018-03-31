@@ -4173,7 +4173,7 @@ rpcpassword=%s
     </message>
     <message>
         <source>Copyright (C) 2015-%i The PIVX Core developers</source>
-        <translation>Copyright (C) 2015-%i The ELLI Core 개발자</translation>
+        <translation>"unfinished"</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

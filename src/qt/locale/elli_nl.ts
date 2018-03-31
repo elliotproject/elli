@@ -2803,7 +2803,7 @@ MultiSend: %1</translation>
     </message>
     <message>
         <source>Copyright (C) 2015-%i The PIVX Core developers</source>
-        <translation>Copyright (C) 2015-%i The ELLI Core Ontwikkelaars</translation>
+        <translation>"unfinished"</translation>
     </message>
     <message>
         <source>Debugging/Testing options:</source>

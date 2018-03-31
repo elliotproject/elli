@@ -3559,7 +3559,7 @@ https://www.transifex.com/elli-project/elli-project-translations</translation>
     </message>
     <message>
         <source>Copyright (C) 2015-%i The PIVX Core developers</source>
-        <translation>Todos os direitos reservados (C) 2015-%i aos Desenvolvedores do ELLI Core</translation>
+        <translation>"unfinished"</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
