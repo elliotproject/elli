@@ -841,7 +841,7 @@ CAmount CBudgetManager::GetTotalBudget(int nHeight)
     //get block value and calculate from that
     CAmount nSubsidy = 0;
     if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 151200) {
-        nSubsidy = 50 * COIN;
+        nSubsidy = 0 * COIN;
     } else if (nHeight <= 302399 && nHeight > Params().LAST_POW_BLOCK()) {
         nSubsidy = 50 * COIN;
     } else if (nHeight <= 345599 && nHeight >= 302400) {
@@ -868,7 +868,7 @@ CAmount CBudgetManager::GetTotalBudget(int nHeight)
 
     // Amount of blocks in a months period of time (using 1 minutes per) = (60*24*30)
     if (nHeight <= 172800) {
-        return 648000 * COIN;
+        return 0 * COIN;
     } else {
         return ((nSubsidy / 100) * 10) * 1440 * 30;
     }
