@@ -9,8 +9,10 @@ ELLI aims to be a reliable fast universal cryptocurrency with maximum possible a
 - Doubled anonymity of transactions using the [_Zerocoin Protocol_](https://en.wikipedia.org/wiki/Zerocoin) and [_Tor_](https://www.torproject.org/) (upcoming update).
 - Fulminant transactions requiring zero confirmation (_SwiftX_ technology).
 
-More information at [elliotproject.org](https://elliotproject.org)
-and visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=3229671)
+### Contacts
+- More information at [elliotproject.org](https://elliotproject.org)
+- Visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=3229671)
+- Join us in [Discord](https://discord.gg/cE4Nefv)
 
 ### Coin Specs
 <table>
