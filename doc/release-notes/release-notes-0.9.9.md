@@ -1,4 +1,4 @@
 v0.9.9
 
-- Mining Fixes
+- Mining fix
 - Xevan algo implemented
