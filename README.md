@@ -2,7 +2,6 @@ ELLI Core integration/staging repository
 =====================================
 
 [![Build Status](https://travis-ci.org/elliotproject/elli.svg?branch=master)](https://travis-ci.org/elliotproject/elli)
-[![Discord](https://img.shields.io/discord/102860784329052160.svg)](https://discord.gg/cE4Nefv)
 
 
 ELLI is an opensource cryptocurrency specialized on fast transactions with low transaction fees and very high security and anonymity level.
