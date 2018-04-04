@@ -42,16 +42,11 @@ The basic reasoning for these requirements is that, you get to keep your ELLI in
         masternode outputs
  (This gets the proof of transaction of sending 10,000)
 
-5) Still on the main computer, go into the ELLI data directory, by default in Windows it’ll be
-%Appdata%/ELLI
-or Linux
-~
-
-Find masternode.conf and add the following line to it:
+5) Using the control wallet, open the masternode configuration file (Tools > Open Masternode Configuration File) and add the following line to it:
 
     <Name of Masternode(Use the name you entered earlier for simplicity)> <Unique IP address>:61317 <The result of Step 1> <Result of Step 4> <The number after the long line in Step 4>
 
-    Example: MN1 31.14.135.27:61317 892WPpkqbr7sr6Si4fdsfssjjapuFzAXwETCrpPJubnrmU6aKzh c8f4965ea57a68d0e6dd384324dfd28cfbe0c801015b973e7331db8ce018716999 1
+    Example: mn1 31.14.135.27:61317 892WPpkqbr7sr6Si4fdsfssjjapuFzAXwETCrpPJubnrmU6aKzh c8f4965ea57a68d0e6dd384324dfd28cfbe0c801015b973e7331db8ce018716999 1
 
 Substitute it with your own values and without the “<>”s
 
@@ -147,17 +142,15 @@ You should see something like:
 
 Congratulations! You have successfully created your masternode!
 
-Now the masternode setup is complete, you are safe to remove “enablezeromint=0” from the elli.conf file of the control wallet.
-
 ## Tearing down a Masternode
-1) How do I stop running MN1 on my VPS hoster and delete MN1 from my ‘ELLI Core – Wallet’?
+1) How do I stop running mn1 on my VPS hoster and delete mn1 from my ‘ELLI Core – Wallet’?
 
 * ./elli-cli stop from the masternode to stop the wallet.
-* Then from your controller wallet PC, edit your masternode.conf, delete the MN1 masternode line entry.
+* Then from your controller wallet PC, edit your masternode.conf, delete the mn1 masternode line entry.
 * Now restart the controller wallet.
 * your 10K will now be unlocked.
 
-2) How do I get the 10k back that I’ve send to my MN1 address at the beginning of the MN1 setup?
+2) How do I get the 10k back that I’ve send to my mn1 address at the beginning of the mn1 setup?
 
 * You don’t need to “get that back” as it is already in your wallet.
 Being in the different address is not an issue as that’s also your address.
