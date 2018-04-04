@@ -37,7 +37,7 @@ The basic reasoning for these requirements is that, you get to keep your ELLI in
 3) 
     - Still in the control wallet, send 10,000 ELLI to the address you generated in step 2 (Be 100% sure that you entered the address correctly. You can verify this when you paste the address into the “Pay To:” field, the label will autopopulate with the name you chose”, also make sure this is exactly 10,000 ELLI; No less, no more.)
     - Be absolutely 100% sure that this is copied correctly. And then check it again. We cannot help you, if you send 10,000 ELLI to an incorrect address.
-    - Wait 15 contirmations to you transaction
+    - Wait 15 confirmations of this transaction
 
 4) Still in the control wallet, enter the command into the console:
 
