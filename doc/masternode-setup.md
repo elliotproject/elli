@@ -23,22 +23,23 @@ First the basic requirements:
 The basic reasoning for these requirements is that, you get to keep your ELLI in your local wallet and host your masternode remotely, securely.
 
 ## Configuration
-Note: with the introduction of zELLI, BEFORE unlocking your wallet, ensure that the following line is in your elli.conf file of the control wallet.
-
-    enablezeromint=0
-This will prevent the wallet from autominting zelli during the Masternode set up process.
 
 1) Using the control wallet, enter the debug console (Tools > Debug console) and type the following command:
-masternode genkey (This will be the masternode’s privkey. We’ll use this later…)
+
+        masternode genkey
+
+(This will be the masternode’s privkey. We’ll use this later…)
 
 2) Using the control wallet still, enter the following command:
-getaccountaddress chooseAnyNameForYourMasternode
+
+        getaccountaddress chooseAnyNameForYourMasternode
 
 3) Still in the control wallet, send 10,000 ELLI to the address you generated in step 2 (Be 100% sure that you entered the address correctly. You can verify this when you paste the address into the “Pay To:” field, the label will autopopulate with the name you chose”, also make sure this is exactly 10,000 ELLI; No less, no more.)
 – Be absolutely 100% sure that this is copied correctly. And then check it again. We cannot help you, if you send 10,000 ELLI to an incorrect address.
 
 4) Still in the control wallet, enter the command into the console:
-masternode outputs
+
+        masternode outputs
  (This gets the proof of transaction of sending 10,000)
 
 5) Still on the main computer, go into the ELLI data directory, by default in Windows it’ll be
