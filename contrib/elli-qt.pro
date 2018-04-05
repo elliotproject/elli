@@ -546,7 +546,6 @@ SOURCES += src/activemasternode.cpp \
            src/test/DoS_tests.cpp \
            src/test/getarg_tests.cpp \
            src/test/hash_tests.cpp \
-           src/test/key_tests.cpp \
            src/test/main_tests.cpp \
            src/test/mempool_tests.cpp \
            src/test/miner_tests.cpp \
@@ -555,7 +554,6 @@ SOURCES += src/activemasternode.cpp \
            src/test/netbase_tests.cpp \
            src/test/pmt_tests.cpp \
            src/test/rpc_tests.cpp \
-           src/test/rpc_wallet_tests.cpp \
            src/test/sanity_tests.cpp \
            src/test/script_P2SH_tests.cpp \
            src/test/script_tests.cpp \
