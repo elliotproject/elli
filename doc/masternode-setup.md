@@ -76,13 +76,14 @@ Unzip and extract:
         ./elli-cli stop
     this will place the config files in your ~/.elli data directory
 ## Configuration of your Masternode
-8) Now on the masternodes, find the ELLI data directory here.(Linux: ~/.elli)
+8) Now on the masternodes, Open the elli.conf file 
 
-        cd ~/.elli
-    Open the elli.conf file and make it look like this:
+        nano ~/.elli/elli.conf
 
-        rpcuser=long random username
-        rpcpassword=longer random password
+    and make it look like this:
+
+        rpcuser=<long random username>
+        rpcpassword=<longer random password>
         rpcallowip=127.0.0.1
         listen=0
         server=1
@@ -90,14 +91,18 @@ Unzip and extract:
         logtimestamps=1
         maxconnections=256
         masternode=1
-        externalip=your unique public ip address
-        bind=your unique public ip address
-        masternodeaddr=your unique public ip address:61317
-        masternodeprivkey=Result of Step 1
+        externalip=<vps unique public ip address>
+        bind=<vps unique public ip address>
+        masternodeaddr=<vps unique public ip address>:61317
+        masternodeprivkey=<result of step 1>
 
     Make sure to replace rpcuser and rpcpassword with your own.
 
-9) Close and restart the control wallet.
+9) Close elli.conf 
+
+        ctrl+o -> enter -> ctrl+x
+
+    and restart the control wallet.
 
 ## Start your masternode
 
