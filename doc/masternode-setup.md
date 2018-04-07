@@ -107,6 +107,10 @@ Unzip and extract:
 ## Start your masternode
 
 10) Now, you need to finally start these things in this order
+- Go to your ELLI 0.9.11 bin directory:
+
+        cd ~/elli-0.9.11/bin
+
 - Start the daemon client in the VPS
 
       ./ellid
