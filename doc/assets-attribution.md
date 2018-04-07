@@ -62,18 +62,6 @@ md2k7
 	src/qt/res/icons/add.png, src/qt/res/icons/edit.png,
 	src/qt/res/icons/remove.png (edited)
 
-Everaldo (Everaldo Coelho)
------------------------
-
-### Info
-* Icon Pack: Kids
-* Designer: Everaldo (Everaldo Coelho)
-* License: GNU/GPL 
-* Site: [http://findicons.com/icon/17102/reload?id=17102](http://findicons.com/icon/17102/reload?id=17102)
-
-### Assets Used
-	scripts/img/reload.xcf (modified), src/qt/res/movies/*.png
-
 [Vignoni David](http://techbase.kde.org/Projects/Oxygen)
 -----------------------
 
