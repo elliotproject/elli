@@ -137,7 +137,7 @@ public:
         nBlockFirstFraudulent = nZerocoinStartHeight*3; //First block that bad serials emerged
         nBlockLastGoodCheckpoint = nZerocoinStartHeight*3; //Last valid accumulator checkpoint
         nBlockEnforceInvalidUTXO = nZerocoinStartHeight*3; //Start enforcing the invalid UTXO's
-        nBlockEnforceMasternodePay = 15421;
+        nBlockEnforceMasternodePay = 15000; //Start enforcing mn pay
 
         const char* pszTimestamp = "elliotproject 31-03-2018 v2";
         CMutableTransaction txNew;
