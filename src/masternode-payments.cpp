@@ -251,7 +251,7 @@ bool IsBlockPayeeValid(const CBlock& block, int nBlockHeight)
         return true;
     LogPrint("masternode","Invalid mn payment detected %s\n", txNew.ToString().c_str());
 
-    if (IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT))
+    if (IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT) && (nBlockHeight > Params().Block_Enforce_Masternode()))
         return false;
     LogPrint("masternode","Masternode payment enforcement is disabled, accepting block\n");
 
@@ -525,7 +525,7 @@ bool CMasternodeBlockPayees::IsTransactionValid(const CTransaction& txNew)
 
     CAmount nReward = GetBlockValue(nBlockHeight);
 
-    if (IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT)) {
+    if (IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT) && (nBlockHeight > Params().Block_Enforce_Masternode())) {
         // Get a stable number of masternodes by ignoring newly activated (< 8000 sec old) masternodes
         nMasternode_Drift_Count = mnodeman.stable_size() + Params().MasternodeCountDrift();
     }

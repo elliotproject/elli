@@ -117,6 +117,7 @@ public:
     int Zerocoin_StartTime() const { return nZerocoinStartTime; }
     int Block_Enforce_Invalid() const { return nBlockEnforceInvalidUTXO; }
 
+    int Block_Enforce_Masternode() const { return nBlockEnforceMasternodePay; }
 protected:
     CChainParams() {}
 
@@ -173,6 +174,8 @@ protected:
     int nBlockFirstFraudulent;
     int nBlockLastGoodCheckpoint;
     int nBlockEnforceInvalidUTXO;
+
+    int nBlockEnforceMasternodePay;
 };
 
 /**

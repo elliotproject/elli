@@ -137,6 +137,7 @@ public:
         nBlockFirstFraudulent = nZerocoinStartHeight*3; //First block that bad serials emerged
         nBlockLastGoodCheckpoint = nZerocoinStartHeight*3; //Last valid accumulator checkpoint
         nBlockEnforceInvalidUTXO = nZerocoinStartHeight*3; //Start enforcing the invalid UTXO's
+        nBlockEnforceMasternodePay = 15421;
 
         const char* pszTimestamp = "elliotproject 31-03-2018 v2";
         CMutableTransaction txNew;
@@ -251,7 +252,7 @@ public:
         nBlockFirstFraudulent = nZerocoinStartHeight*2; //First block that bad serials emerged
         nBlockLastGoodCheckpoint = nZerocoinStartHeight*2; //Last valid accumulator checkpoint
         nBlockEnforceInvalidUTXO = nZerocoinStartHeight*2; //Start enforcing the invalid UTXO's
-
+        nBlockEnforceMasternodePay = 1;
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1522479068;
         genesis.nNonce = 20800966;

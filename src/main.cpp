@@ -2184,7 +2184,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 
         //if a mn count is inserted into the function we are looking for a specific result for a masternode count
         if (nMasternodeCount < 1){
-            if (IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT))
+            if (IsSporkActive(SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT) && (nHeight > Params().Block_Enforce_Masternode()))
                 nMasternodeCount = mnodeman.stable_size();
             else
                 nMasternodeCount = mnodeman.size();
