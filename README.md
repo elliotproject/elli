@@ -1,6 +1,8 @@
 ELLI Core integration/staging repository
 =====================================
 
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/elliotproject/elli)
 [![Build Status](https://travis-ci.org/elliotproject/elli.svg?branch=master)](https://travis-ci.org/elliotproject/elli)
 [![GitHub version](https://badge.fury.io/gh/elliotproject%2Felli.svg)](https://badge.fury.io/gh/elliotproject%2Felli)
 
