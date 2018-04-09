@@ -167,6 +167,8 @@ public:
         vSeeds.push_back(CDNSSeedData("foxtrot.elliotproject.org",  "foxtrot.elliotproject.org"));
         vSeeds.push_back(CDNSSeedData("golf.elliotproject.org",     "golf.elliotproject.org"));
         vSeeds.push_back(CDNSSeedData("hotel.elliotproject.org",    "hotel.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("india.elliotproject.org",    "india.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("juliet.elliotproject.org",   "juliet.elliotproject.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 33); // starts with E
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
@@ -272,6 +274,8 @@ public:
         vSeeds.push_back(CDNSSeedData("tfoxtrot.elliotproject.org",  "tfoxtrot.elliotproject.org"));
         vSeeds.push_back(CDNSSeedData("tgolf.elliotproject.org",     "tgolf.elliotproject.org"));
         vSeeds.push_back(CDNSSeedData("thotel.elliotproject.org",    "thotel.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("tindia.elliotproject.org",    "tindia.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("tjuliet.elliotproject.org",   "tjuliet.elliotproject.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet elli addresses start with 'x' or 'y'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet elli script addresses start with '8' or '9'
