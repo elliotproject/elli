@@ -37,7 +37,7 @@ The basic reasoning for these requirements is that, you get to keep your ELLI in
 3) 
     - Still in the control wallet, send 10,000 ELLI to the address you generated in step 2 (Be 100% sure that you entered the address correctly. You can verify this when you paste the address into the “Pay To:” field, the label will autopopulate with the name you chose”, also make sure this is exactly 10,000 ELLI; No less, no more.)
     - Be absolutely 100% sure that this is copied correctly. And then check it again. We cannot help you, if you send 10,000 ELLI to an incorrect address.
-    - Wait 15 confirmations of this transaction
+    - Wait 6 confirmations of this transaction
 
 4) Still in the control wallet, enter the command into the console:
 
@@ -60,16 +60,16 @@ The basic reasoning for these requirements is that, you get to keep your ELLI in
         cd ~
     From your home directory, download the latest version from the ELLI GitHub repository:
 
-        wget https://github.com/elliotproject/elli/releases/download/v0.9.11/elli-0.9.11-x86_64-linux-gnu.tar.gz
+        wget https://github.com/elliotproject/elli/releases/download/v0.9.12/elli-0.9.12-x86_64-linux-gnu.tar.gz
     The link above is for Ubuntu (or similar), make sure you choose the correct version of the core wallet if you are not using Ubuntu from: 
 https://github.com/elliotproject/elli/releases
 Unzip and extract:  
 
-        tar -zxvf elli-0.9.11-x86_64-linux-gnu.tar.gz
+        tar -zxvf elli-0.9.12-x86_64-linux-gnu.tar.gz
 
-    Go to your ELLI 0.9.11 bin directory:
+    Go to your ELLI 0.9.12 bin directory:
 
-        cd ~/elli-0.9.11/bin
+        cd ~/elli-0.9.12/bin
     Note: If this is the first time running the wallet in the VPS, you’ll need to attempt to start the wallet
 
         ./ellid -daemon
@@ -107,9 +107,9 @@ Unzip and extract:
 ## Start your masternode
 
 10) Now, you need to finally start these things in this order
-- Go to your ELLI 0.9.11 bin directory:
+- Go to your ELLI 0.9.12 bin directory:
 
-        cd ~/elli-0.9.11/bin
+        cd ~/elli-0.9.12/bin
 
 - Start the daemon client in the VPS
 
@@ -117,9 +117,7 @@ Unzip and extract:
 
 - From the Control wallet debug console
 
-      startmasternode alias false <mymnalias>
-
-  where <mymnalias> is the name of your masternode alias (without brackets)
+      startmasternode all 0
 
   The following should appear:
     
