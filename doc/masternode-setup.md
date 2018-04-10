@@ -117,7 +117,9 @@ Unzip and extract:
 
 - From the Control wallet debug console
 
-      startmasternode all 0
+      startmasternode alias false <mymnalias>
+
+  where <mymnalias> is the name of your masternode alias (without brackets)
 
   The following should appear:
     
