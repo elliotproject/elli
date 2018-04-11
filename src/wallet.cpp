@@ -649,6 +649,7 @@ bool CWallet::AddToWallet(const CWalletTx& wtxIn, bool fFromLoadWallet)
         pair<map<uint256, CWalletTx>::iterator, bool> ret = mapWallet.insert(make_pair(hash, wtxIn));
         CWalletTx& wtx = (*ret.first).second;
         wtx.BindWallet(this);
+
         bool fInsertedNew = ret.second;
         if (fInsertedNew) {
             wtx.nTimeReceived = GetAdjustedTime();
@@ -656,6 +657,11 @@ bool CWallet::AddToWallet(const CWalletTx& wtxIn, bool fFromLoadWallet)
             wtx.nTimeSmart = ComputeTimeSmart(wtx);
             AddToSpends(hash);
         }
+
+		// wqking -- fix a but that listtransactions doesn't display recent transactions.
+        if(fInsertedNew) {
+			wtxOrdered.insert(make_pair(wtx.nOrderPos, TxPair(&wtx, (CAccountingEntry*)0)));
+		}
 
         bool fUpdated = false;
         if (!fInsertedNew) {
