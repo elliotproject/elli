@@ -161,6 +161,7 @@ public:
         assert(hashGenesisBlock == uint256("0x000008d83ed83d3c080def52a2d534af4c663522b138ade392572ef0e7feb18e"));
         assert(genesis.hashMerkleRoot == uint256("0x90a64b2bbca84a0f4fe84514e83979023c35daacff69b15ab8d4e26c217b0191"));
 
+        vSeeds.push_back(CDNSSeedData("dnsseed.elliotproject.org",    "elliotproject.org"));
         vSeeds.push_back(CDNSSeedData("alpha.elliotproject.org",    "alpha.elliotproject.org"));
         vSeeds.push_back(CDNSSeedData("bravo.elliotproject.org",    "bravo.elliotproject.org"));
         vSeeds.push_back(CDNSSeedData("charlie.elliotproject.org",  "charlie.elliotproject.org"));
