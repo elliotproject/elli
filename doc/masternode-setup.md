@@ -82,10 +82,6 @@ Unzip and extract:
 
     and make it look like this:
 
-        rpcuser=<long random username>
-        rpcpassword=<longer random password>
-        rpcallowip=127.0.0.1
-        listen=0
         server=1
         daemon=1
         logtimestamps=1
