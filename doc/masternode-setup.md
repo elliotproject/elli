@@ -60,16 +60,16 @@ The basic reasoning for these requirements is that, you get to keep your ELLI in
         cd ~
     From your home directory, download the latest version from the ELLI GitHub repository:
 
-        wget https://github.com/elliotproject/elli/releases/download/v0.9.12/elli-0.9.12-x86_64-linux-gnu.tar.gz
+        wget https://github.com/elliotproject/elli/releases/download/v0.9.14/elli-0.9.14-x86_64-linux-gnu.tar.gz
     The link above is for Ubuntu (or similar), make sure you choose the correct version of the core wallet if you are not using Ubuntu from: 
 https://github.com/elliotproject/elli/releases
 Unzip and extract:  
 
-        tar -zxvf elli-0.9.12-x86_64-linux-gnu.tar.gz
+        tar -zxvf elli-0.9.14-x86_64-linux-gnu.tar.gz
 
-    Go to your ELLI 0.9.12 bin directory:
+    Go to your ELLI 0.9.14 bin directory:
 
-        cd ~/elli-0.9.12/bin
+        cd ~/elli-0.9.14/bin
     Note: If this is the first time running the wallet in the VPS, you’ll need to attempt to start the wallet
 
         ./ellid -daemon
@@ -103,9 +103,9 @@ Unzip and extract:
 ## Start your masternode
 
 10) Now, you need to finally start these things in this order
-- Go to your ELLI 0.9.12 bin directory:
+- Go to your ELLI 0.9.14 bin directory:
 
-        cd ~/elli-0.9.12/bin
+        cd ~/elli-0.9.14/bin
 
 - Start the daemon client in the VPS
 
