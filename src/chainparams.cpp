@@ -163,24 +163,16 @@ public:
         assert(hashGenesisBlock == uint256("0x000008d83ed83d3c080def52a2d534af4c663522b138ade392572ef0e7feb18e"));
         assert(genesis.hashMerkleRoot == uint256("0x90a64b2bbca84a0f4fe84514e83979023c35daacff69b15ab8d4e26c217b0191"));
 
-        vSeeds.push_back(CDNSSeedData("dnsseed.elliotproject.org",    "elliotproject.org"));
         vSeeds.push_back(CDNSSeedData("alpha.elliotproject.org",    "alpha.elliotproject.org"));
         vSeeds.push_back(CDNSSeedData("bravo.elliotproject.org",    "bravo.elliotproject.org"));
         vSeeds.push_back(CDNSSeedData("charlie.elliotproject.org",  "charlie.elliotproject.org"));
         vSeeds.push_back(CDNSSeedData("delta.elliotproject.org",    "delta.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("echo.elliotproject.org",     "echo.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("foxtrot.elliotproject.org",  "foxtrot.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("golf.elliotproject.org",     "golf.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("hotel.elliotproject.org",    "hotel.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("india.elliotproject.org",    "india.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("juliet.elliotproject.org",   "juliet.elliotproject.org"));
-
+        
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 33); // starts with E
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 212);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x25)(0x33).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0x21)(0x31)(0x2B).convert_to_container<std::vector<unsigned char> >();
-        // 	BIP44 coin type TODO
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x77).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
@@ -271,16 +263,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        vSeeds.push_back(CDNSSeedData("talpha.elliotproject.org",    "talpha.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("tbravo.elliotproject.org",    "tbravo.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("tcharlie.elliotproject.org",  "tcharlie.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("tdelta.elliotproject.org",    "tdelta.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("techo.elliotproject.org",     "techo.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("tfoxtrot.elliotproject.org",  "tfoxtrot.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("tgolf.elliotproject.org",     "tgolf.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("thotel.elliotproject.org",    "thotel.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("tindia.elliotproject.org",    "tindia.elliotproject.org"));
-        vSeeds.push_back(CDNSSeedData("tjuliet.elliotproject.org",   "tjuliet.elliotproject.org"));
+        vSeeds.push_back(CDNSSeedData("testnet.elliotproject.org",    "testnet.elliotproject.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet elli addresses start with 'x' or 'y'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet elli script addresses start with '8' or '9'
