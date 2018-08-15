@@ -1,5 +1,3 @@
-<!--- Remove this description and sections that do not apply -->
-
 This issue tracker is only for technical issues related to ELLI Core.
 General ELLI questions and/or support requests and are best directed to the [ELLI Discord](https://discord.gg/cE4Nefv).
 

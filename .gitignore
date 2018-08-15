@@ -1,8 +1,4 @@
-.gitignore
-*.sublime-project
-*.sublime-workspace
-todo.txt
-reset-files.bash
+!.gitignore
 
 *.tar.gz
 
@@ -102,13 +98,6 @@ qrc_*.cpp
 .DS_Store
 build
 
-#lcov
-*.gcno
-/*.info
-test_elli.coverage/
-total.coverage/
-coverage_percent.txt
-
 #build tests
 linux-coverage-build
 linux-build
@@ -120,13 +109,4 @@ qa/pull-tester/test.*/*
 
 !src/leveldb*/Makefile
 
-.cproject
-.project
-/doc/doxygen/
-/nbproject/
-
-.idea
-CMakeLists.txt
-cmake-build-debug
-
-/.vscode/settings.json
+.vscode
