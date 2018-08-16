@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 CORES=$(nproc --all)
-HOST="x86_64-linux-gnu"
+HOST="i686-pc-linux-gnu"
 CONFIGFLAGS="--enable-glibc-back-compat --enable-reduce-exports --disable-bench --disable-tests --disable-gui-tests --disable-maintainer-mode --disable-dependency-tracking --enable-upnp-default"
 HOST_CFLAGS=""
 HOST_CXXFLAGS=""
