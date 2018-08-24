@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
+cd ../..
 CORES=$(nproc --all)
 HOST="i686-w64-mingw32"
-CONFIGFLAGS="--enable-reduce-exports --disable-bench --disable-gui-tests --disable-tests --disable-maintainer-mode --disable-dependency-tracking --enable-upnp-default"
-HOST_CFLAGS=""
-HOST_CXXFLAGS=""
-BASEPREFIX=$PWD/depends
+CONFIGFLAGS="--enable-reduce-exports --disable-bench --disable-tests --disable-gui-tests --disable-maintainer-mode --disable-dependency-tracking --enable-upnp-default --disable-zmq"
+HOST_CFLAGS="-g"
+HOST_CXXFLAGS="-g"
+BASEPREFIX="$PWD/depends"
 
 make HOST=${HOST} -C ${BASEPREFIX}
 ./autogen.sh
