@@ -25,10 +25,10 @@ ELLI aims to be a reliable fast universal cryptocurrency with maximum possible a
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
 <tr><td>PoS Reward Retargeting</td><td>SeeSaw</td></tr>
 <tr><td>Difficulty Retargeting Algo</td><td>DarkGravity v3</td></tr>
-<tr><td>Transaction Security Algo</td><td>Zerocoin</td></tr>
-<tr><td>Max Coin Supply (PoW Phase)</td><td>43,349,500 ELLI</td></tr>
+<tr><td>Transaction Security Algo</td><td>zk-SNARK (upcoming)</td></tr>
+<tr><td>Max Coin Supply (PoW Phase)</td><td>13,170,000 ELLI</td></tr>
 <tr><td>Max Coin Supply (PoS Phase)</td><td>Infinite</td></tr>
-<tr><td>Premine</td><td>0.48% (210 kELLI)</td></tr>
+<tr><td>Premine</td><td>210,000 ELLI</td></tr>
 </table>
 
 ### Reward Distribution
@@ -36,16 +36,16 @@ ELLI aims to be a reliable fast universal cryptocurrency with maximum possible a
 <table>
 <th colspan=4>Inital premine</th>
 <tr><th>Block Height</th><th>Reward Amount</th></tr>
-<tr><td>1</td><td>210,000 ELLI</td></tr>
+<tr><td>0</td><td>210,000 ELLI</td></tr>
 </table>
 
 ### PoW Rewards Breakdown
 
 <table>
-<th>Block Height</th><th>Masternodes</th><th>Miner</th><th>Budget</th>
-<tr><td>2-43200</td><td>40% (20 ELLI)</td><td>60% (30 ELLI)</td><td>0% (0 ELLI)</td></tr>
-<tr><td>43201-151200</td><td>50% (25 ELLI)</td><td>50% (25 ELLI)</td><td>0% (0 ELLI)</td></tr>
-<tr><td>151201-259200</td><td>60% (30 ELLI)</td><td>40% (20 ELLI)</td><td>0% (0 ELLI)</td></tr>
+<th>Block Height</th><th>Masternodes</th><th>Miner</th>
+<tr><td>1-43200</td><td>40% (20 ELLI)</td><td>60% (30 ELLI)</td></tr>
+<tr><td>43201-151200</td><td>50% (25 ELLI)</td><td>50% (25 ELLI)</td></tr>
+<tr><td>151201-259200</td><td>60% (30 ELLI)</td><td>40% (20 ELLI)</td></tr>
 </table>
 
 ### PoS Rewards Breakdown
