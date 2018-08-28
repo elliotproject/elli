@@ -149,6 +149,7 @@ public:
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
+        // 0x1d00ffff = 486604799
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 250 * COIN;
         txNew.vout[0].scriptPubKey = CScript() << ParseHex("04b3e4906c8b37b9975dfcdba0543999991fff091a66a7bd5bb885ee3e64686dd9b36c92ed45cc1f5b52d374264a83c36556f4f5ed5d4950bd99e1643b67b38639") << OP_CHECKSIG;
