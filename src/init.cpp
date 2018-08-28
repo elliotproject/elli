@@ -38,12 +38,12 @@
 #include "util.h"
 #include "utilmoneystr.h"
 #include "validationinterface.h"
+
 #ifdef ENABLE_WALLET
 #include "db.h"
 #include "wallet.h"
 #include "walletdb.h"
 #include "accumulators.h"
-
 #endif
 
 #include <fstream>
@@ -72,6 +72,7 @@ using namespace std;
 CWallet* pwalletMain = NULL;
 int nWalletBackups = 10;
 #endif
+
 volatile bool fFeeEstimatesInitialized = false;
 volatile bool fRestartRequested = false; // true: restart false: shutdown
 extern std::list<uint256> listAccCheckpointsNoDB;
@@ -842,7 +843,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 
     // Make sure enough file descriptors are available
     int nBind = std::max((int)mapArgs.count("-bind") + (int)mapArgs.count("-whitebind"), 1);
-    nMaxConnections = GetArg("-maxconnections", 200);
+    nMaxConnections = (int)GetArg("-maxconnections", 200);
     nMaxConnections = std::max(std::min(nMaxConnections, (int)(FD_SETSIZE - nBind - MIN_CORE_FILEDESCRIPTORS)), 0);
     int nFD = RaiseFileDescriptorLimit(nMaxConnections + MIN_CORE_FILEDESCRIPTORS);
     if (nFD < MIN_CORE_FILEDESCRIPTORS)

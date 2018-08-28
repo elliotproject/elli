@@ -60,7 +60,12 @@ using namespace std;
 
 namespace
 {
-const int MAX_OUTBOUND_CONNECTIONS = 50;
+
+/*
+Connectable peers on the network are a scarce resource, and essential to the decentralization. 
+If people go try connect to all of them, they will very quickly run out.
+*/
+int MAX_OUTBOUND_CONNECTIONS = 20;
 
 struct ListenSocket {
     SOCKET socket;
@@ -83,7 +88,7 @@ static CNode* pnodeLocalHost = NULL;
 uint64_t nLocalHostNonce = 0;
 static std::vector<ListenSocket> vhListenSocket;
 CAddrMan addrman;
-int nMaxConnections = 200;
+int nMaxConnections = (int)GetArg("-maxconnections", 200);
 bool fAddressesInitialized = false;
 
 vector<CNode*> vNodes;
