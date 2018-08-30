@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>723</width>
+    <width>962</width>
     <height>457</height>
    </rect>
   </property>
@@ -71,6 +71,9 @@
             </property>
             <property name="text">
              <string>MASTERNODES</string>
+            </property>
+            <property name="margin">
+             <number>20</number>
             </property>
            </widget>
           </item>

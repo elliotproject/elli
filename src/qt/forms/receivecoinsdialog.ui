@@ -57,6 +57,9 @@
             <property name="text">
              <string>RECEIVE</string>
             </property>
+            <property name="margin">
+             <number>20</number>
+            </property>
            </widget>
           </item>
           <item>

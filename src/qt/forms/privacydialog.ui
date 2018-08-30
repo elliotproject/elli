@@ -72,6 +72,9 @@
             <property name="text">
              <string>PRIVACY</string>
             </property>
+            <property name="margin">
+             <number>20</number>
+            </property>
            </widget>
           </item>
           <item>
@@ -922,9 +925,6 @@ zELLI are mature when they have more than 20 confirmations AND more than 2 mints
                           </item>
                           <item>
                            <widget class="QLabel" name="labelzELLI">
-                            <property name="alignment">
-                             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                            </property>
                             <property name="minimumSize">
                              <size>
                               <width>55</width>
@@ -933,6 +933,9 @@ zELLI are mature when they have more than 20 confirmations AND more than 2 mints
                             </property>
                             <property name="text">
                              <string>zELLI</string>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                             </property>
                            </widget>
                           </item>
