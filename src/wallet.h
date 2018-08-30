@@ -81,28 +81,28 @@ enum AvailableCoinsType {
     ONLY_DENOMINATED = 2,
     ONLY_NOT10000IFMN = 3,
     ONLY_NONDENOMINATED_NOT10000IFMN = 4, // ONLY_NONDENOMINATED and not 10000 ELLI at the same time
-    ONLY_10000 = 5,                        // find masternode outputs including locked ones (use with caution)
-    STAKABLE_COINS = 6                          // UTXO's that are valid for staking
+    ONLY_10000 = 5,                       // find masternode outputs including locked ones (use with caution)
+    STAKABLE_COINS = 6                    // UTXO's that are valid for staking
 };
 
 // Possible states for zELLI send
 enum ZerocoinSpendStatus {
-    ZELLI_SPEND_OKAY = 0,                            // No error
-    ZELLI_SPEND_ERROR = 1,                           // Unspecified class of errors, more details are (hopefully) in the returning text
-    ZELLI_WALLET_LOCKED = 2,                         // Wallet was locked
-    ZELLI_COMMIT_FAILED = 3,                         // Commit failed, reset status
-    ZELLI_ERASE_SPENDS_FAILED = 4,                   // Erasing spends during reset failed
-    ZELLI_ERASE_NEW_MINTS_FAILED = 5,                // Erasing new mints during reset failed
-    ZELLI_TRX_FUNDS_PROBLEMS = 6,                    // Everything related to available funds
-    ZELLI_TRX_CREATE = 7,                            // Everything related to create the transaction
-    ZELLI_TRX_CHANGE = 8,                            // Everything related to transaction change
-    ZELLI_TXMINT_GENERAL = 9,                        // General errors in MintToTxIn
-    ZELLI_INVALID_COIN = 10,                         // Selected mint coin is not valid
-    ZELLI_FAILED_ACCUMULATOR_INITIALIZATION = 11,    // Failed to initialize witness
-    ZELLI_INVALID_WITNESS = 12,                      // Spend coin transaction did not verify
-    ZELLI_BAD_SERIALIZATION = 13,                    // Transaction verification failed
-    ZELLI_SPENT_USED_ZELLI = 14,                      // Coin has already been spend
-    ZELLI_TX_TOO_LARGE = 15                          // The transaction is larger than the max tx size
+    ZELLI_SPEND_OKAY = 0,                         // No error
+    ZELLI_SPEND_ERROR = 1,                        // Unspecified class of errors, more details are (hopefully) in the returning text
+    ZELLI_WALLET_LOCKED = 2,                      // Wallet was locked
+    ZELLI_COMMIT_FAILED = 3,                      // Commit failed, reset status
+    ZELLI_ERASE_SPENDS_FAILED = 4,                // Erasing spends during reset failed
+    ZELLI_ERASE_NEW_MINTS_FAILED = 5,             // Erasing new mints during reset failed
+    ZELLI_TRX_FUNDS_PROBLEMS = 6,                 // Everything related to available funds
+    ZELLI_TRX_CREATE = 7,                         // Everything related to create the transaction
+    ZELLI_TRX_CHANGE = 8,                         // Everything related to transaction change
+    ZELLI_TXMINT_GENERAL = 9,                     // General errors in MintToTxIn
+    ZELLI_INVALID_COIN = 10,                      // Selected mint coin is not valid
+    ZELLI_FAILED_ACCUMULATOR_INITIALIZATION = 11, // Failed to initialize witness
+    ZELLI_INVALID_WITNESS = 12,                   // Spend coin transaction did not verify
+    ZELLI_BAD_SERIALIZATION = 13,                 // Transaction verification failed
+    ZELLI_SPENT_USED_ZELLI = 14,                  // Coin has already been spend
+    ZELLI_TX_TOO_LARGE = 15                       // The transaction is larger than the max tx size
 };
 
 struct CompactTallyItem {
@@ -200,7 +200,7 @@ public:
 
     // Zerocoin additions
     bool CreateZerocoinMintTransaction(const CAmount nValue, CMutableTransaction& txNew, vector<CZerocoinMint>& vMints, CReserveKey* reservekey, int64_t& nFeeRet, std::string& strFailReason, const CCoinControl* coinControl = NULL, const bool isZCSpendChange = false);
-    bool CreateZerocoinSpendTransaction(CAmount nValue, int nSecurityLevel, CWalletTx& wtxNew, CReserveKey& reserveKey, CZerocoinSpendReceipt& receipt, vector<CZerocoinMint>& vSelectedMints, vector<CZerocoinMint>& vNewMints, bool fMintChange,  bool fMinimizeChange, CBitcoinAddress* address = NULL);
+    bool CreateZerocoinSpendTransaction(CAmount nValue, int nSecurityLevel, CWalletTx& wtxNew, CReserveKey& reserveKey, CZerocoinSpendReceipt& receipt, vector<CZerocoinMint>& vSelectedMints, vector<CZerocoinMint>& vNewMints, bool fMintChange, bool fMinimizeChange, CBitcoinAddress* address = NULL);
     bool MintToTxIn(CZerocoinMint zerocoinSelected, int nSecurityLevel, const uint256& hashTxOut, CTxIn& newTxIn, CZerocoinSpendReceipt& receipt);
     std::string MintZerocoinFromOutPoint(CAmount nValue, CWalletTx& wtxNew, vector<CZerocoinMint>& vMints, const vector<COutPoint> vOutpts);
     std::string MintZerocoin(CAmount nValue, CWalletTx& wtxNew, vector<CZerocoinMint>& vMints, const CCoinControl* coinControl = NULL);
@@ -320,7 +320,7 @@ public:
     {
         fBackupMints = fEnabled;
     }
-    
+
     bool isMultiSendEnabled()
     {
         return fMultiSendMasternodeReward || fMultiSendStake;
@@ -336,7 +336,7 @@ public:
     std::list<CAccountingEntry> laccentries;
 
     typedef std::pair<CWalletTx*, CAccountingEntry*> TxPair;
-    typedef std::multimap<int64_t, TxPair > TxItems;
+    typedef std::multimap<int64_t, TxPair> TxItems;
     TxItems wtxOrdered;
 
     int64_t nOrderPosNext;
@@ -363,7 +363,7 @@ public:
     std::map<CBitcoinAddress, std::vector<COutput> > AvailableCoinsByAddress(bool fConfirmed = true, CAmount maxCoinValue = 0);
     bool SelectCoinsMinConf(const CAmount& nTargetValue, int nConfMine, int nConfTheirs, std::vector<COutput> vCoins, std::set<std::pair<const CWalletTx*, unsigned int> >& setCoinsRet, CAmount& nValueRet) const;
 
-    /// Get 1000DASH output and keys which can be used for the Masternode
+    /// Get 10000 ELLI output and keys which can be used for the Masternode
     bool GetMasternodeVinAndKeys(CTxIn& txinRet, CPubKey& pubKeyRet, CKey& keyRet, std::string strTxHash = "", std::string strOutputIndex = "");
     /// Extract txin information and keys from output
     bool GetVinAndKeysFromOutput(COutput out, CTxIn& txinRet, CPubKey& pubKeyRet, CKey& keyRet);
@@ -475,7 +475,7 @@ public:
         CAmount nFeePay = 0);
     bool CreateTransaction(CScript scriptPubKey, const CAmount& nValue, CWalletTx& wtxNew, CReserveKey& reservekey, CAmount& nFeeRet, std::string& strFailReason, const CCoinControl* coinControl = NULL, AvailableCoinsType coin_type = ALL_COINS, bool useIX = false, CAmount nFeePay = 0);
     bool CommitTransaction(CWalletTx& wtxNew, CReserveKey& reservekey, std::string strCommand = "tx");
-    bool AddAccountingEntry(const CAccountingEntry&, CWalletDB & pwalletdb);
+    bool AddAccountingEntry(const CAccountingEntry&, CWalletDB& pwalletdb);
     std::string PrepareObfuscationDenominate(int minRounds, int maxRounds);
     int GenerateObfuscationOutputs(int nTotalValue, std::vector<CTxOut>& vout);
     bool CreateCollateralTransaction(CMutableTransaction& txCollateral, std::string& strReason);
@@ -955,7 +955,7 @@ public:
     CAmount GetLockedCredit() const;
     CAmount GetDenominatedCredit(bool unconfirmed, bool fUseCache = true) const;
     CAmount GetImmatureWatchOnlyCredit(const bool& fUseCache = true) const;
-    CAmount GetAvailableWatchOnlyCredit(const bool& fUseCache = true) const;        
+    CAmount GetAvailableWatchOnlyCredit(const bool& fUseCache = true) const;
     CAmount GetLockedWatchOnlyCredit() const;
 
     CAmount GetChange() const
