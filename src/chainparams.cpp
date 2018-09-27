@@ -61,11 +61,12 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     (20211, uint256("0x00000000019bd73323fd2603507b78eed5e7b869e224821f93ffb59bd8f92e7d"))
     (33120, uint256("0x0000000002a5df2e01d31d17d7c335ac5b38649f0cb1a96ec8847b69e1d463d1"))
     (47705, uint256("0x000000000466f22ff8b362ea492909ecca37598791d6f37caf23beff372b7e91"))
-    (187387, uint256("0x0000000001cba96d69c58e02f35ff2ea1a4ee79e383be14dd790e543d20d4a0c"));
+    (187387, uint256("0x0000000001cba96d69c58e02f35ff2ea1a4ee79e383be14dd790e543d20d4a0c"))
+    (245416, uint256("0x000000000e28b5bd2ce101a78394f600fa8991526608e7a993821878d09a7ae5"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1534376107, // * UTC UNIX timestamp of last checkpoint block
-    219066,    // * total number of transactions between genesis and last checkpoint
+    1538036844, // * UTC UNIX timestamp of last checkpoint block
+    283743,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -135,8 +136,8 @@ public:
         /** Height or Time Based Activations **/
         nLastPOWBlock = 259200;
         nModifierUpdateBlock = 1;
-        nZerocoinStartHeight = nLastPOWBlock + 100;
-        nZerocoinStartTime = 1522479067 + nZerocoinStartHeight*nTargetSpacing; 
+        nZerocoinStartHeight = 359200;
+        nZerocoinStartTime = 1552479067; 
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
 
         nBlockRecalculateAccumulators = nZerocoinStartHeight*3; //Trigger a recalculation of accumulators
