@@ -4313,7 +4313,7 @@ bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, bool f
             REJECT_INVALID, "high-hash");
 
     // Version 4 header must be used after Params().Zerocoin_StartHeight(). And never before.
-    if (block.GetBlockTime() > Params().Zerocoin_StartTime()) {
+    if (false) {
         if(block.nVersion < Params().Zerocoin_HeaderVersion())
             return state.DoS(50, error("CheckBlockHeader() : block version must be above 4 after ZerocoinStartHeight"),
             REJECT_INVALID, "block-version");
@@ -4332,9 +4332,6 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
 
     // Check that the header is valid (particularly PoW).  This is mostly
     // redundant with the call in AcceptBlockHeader.
-    if (block.GetHash().ToString() == "000000000c1146ba6fbbebc645aa28911cfd7540edb2193e1e90072230233a1a") {
-        return state.DoS(100, error("CheckBlock() : CheckBlockHeader failed"), REJECT_INVALID, "bad-header", true);
-    }
     
     if (!CheckBlockHeader(block, state, fCheckPOW && block.IsProofOfWork()))
         return state.DoS(100, error("CheckBlock() : CheckBlockHeader failed"),
@@ -4446,7 +4443,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
     }
 
     // Check transactions
-    bool fZerocoinActive = block.GetBlockTime() > Params().Zerocoin_StartTime();
+    bool fZerocoinActive = false;
     vector<CBigNum> vBlockSerials;
     for (const CTransaction& tx : block.vtx) {
         if (!CheckTransaction(tx, fZerocoinActive, chainActive.Height() + 1 >= Params().Zerocoin_Block_EnforceSerialRange(), state))
@@ -4615,10 +4612,6 @@ bool AcceptBlockHeader(const CBlock& block, CValidationState& state, CBlockIndex
     BlockMap::iterator miSelf = mapBlockIndex.find(hash);
     CBlockIndex* pindex = NULL;
 
-    if (block.GetHash().ToString() == "000000000c1146ba6fbbebc645aa28911cfd7540edb2193e1e90072230233a1a") {
-        return false;
-    }
-
     // TODO : ENABLE BLOCK CACHE IN SPECIFIC CASES
     if (miSelf != mapBlockIndex.end()) {
         // Block header is already known.
@@ -4677,10 +4670,6 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, 
     AssertLockHeld(cs_main);
 
     CBlockIndex*& pindex = *ppindex;
-
-    if (block.GetHash().ToString() == "000000000c1146ba6fbbebc645aa28911cfd7540edb2193e1e90072230233a1a") {
-        return false;
-    }
 
     // Get prev block index
     CBlockIndex* pindexPrev = NULL;

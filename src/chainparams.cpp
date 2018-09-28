@@ -51,6 +51,19 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 //   (no blocks before with a timestamp after, none after with
 //    timestamp before)
 // + Contains no strange transactions
+/*
+2018-09-28 21:11:37 UpdateTip: new best=000000002237850ac62255fdf5d9aa6d8976940dbf33b831d8ce380cf701ac96  
+height=245300  log2_work=55.077972  tx=283601  
+date=2018-09-28 21:11:29 progress=0.999997  cache=28611 unixtime=1538169089
+
+UpdateTip: new best=0000000015b9f1e9ff91930e177167610c7fadcff14076336f2b763d74686ba7  
+height=245400  log2_work=55.078036  tx=283701  date=2018-09-28 22:34:13 progress=0.999986  
+cache=498 unixtime=1538174053
+
+UpdateTip: new best=0000000044cf113364fbd4fd8d9629eccd80dda0c073a39869af08a75f6b52dc  
+height=245418  log2_work=55.078047  tx=283722  date=2018-09-28 22:58:35 
+progress=0.999991  cache=677 unixtime=1538175515
+*/
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
     (0,     uint256("0x000008d83ed83d3c080def52a2d534af4c663522b138ade392572ef0e7feb18e"))
@@ -62,11 +75,14 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     (33120, uint256("0x0000000002a5df2e01d31d17d7c335ac5b38649f0cb1a96ec8847b69e1d463d1"))
     (47705, uint256("0x000000000466f22ff8b362ea492909ecca37598791d6f37caf23beff372b7e91"))
     (187387, uint256("0x0000000001cba96d69c58e02f35ff2ea1a4ee79e383be14dd790e543d20d4a0c"))
-    (245200, uint256("0x000000000fbb2be5e282ecf641db7dfbf1670c5b96022107f6ccda2fc93b28f0"));
+    (245200, uint256("0x000000000fbb2be5e282ecf641db7dfbf1670c5b96022107f6ccda2fc93b28f0"))
+    (245300, uint256("0x000000002237850ac62255fdf5d9aa6d8976940dbf33b831d8ce380cf701ac96"))
+    (245400, uint256("0x0000000015b9f1e9ff91930e177167610c7fadcff14076336f2b763d74686ba7"))
+    (245418, uint256("0x0000000044cf113364fbd4fd8d9629eccd80dda0c073a39869af08a75f6b52dc"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1538023016, // * UTC UNIX timestamp of last checkpoint block
-    283500,    // * total number of transactions between genesis and last checkpoint
+    1538175515, // * UTC UNIX timestamp of last checkpoint block
+    283722,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -122,10 +138,6 @@ public:
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
 
-        //nEnforceBlockUpgradeMajority = 750;
-        //nRejectBlockOutdatedMajority = 950;
-        //nToCheckBlockUpgradeMajority = 1000;
-
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // ELLI: 1 day
         nTargetSpacing = 1 * 60;  // ELLI: 1 minute
@@ -137,7 +149,6 @@ public:
         nLastPOWBlock = 259200;
         nModifierUpdateBlock = 1;
         nZerocoinStartHeight = 359200;
-        nZerocoinStartTime = 1552479067; 
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
 
         nBlockRecalculateAccumulators = nZerocoinStartHeight*3; //Trigger a recalculation of accumulators
@@ -236,10 +247,6 @@ public:
         vAlertPubKey = ParseHex("047f34248d7717fee995f669ad25fa457ca1c6ef6052989083a25d3f47c2aa3f6cd815b7c4db3254d6a51a1a6dc4691c29f50e37355eb10bbec2fad2c2145366ce");
         nDefaultPort = 61319;
 
-        //nEnforceBlockUpgradeMajority = 51;
-        //nRejectBlockOutdatedMajority = 75;
-        //nToCheckBlockUpgradeMajority = 100;
-
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // ELLI: 1 day
         nTargetSpacing = 1 * 60;  // ELLI: 1 minute
@@ -249,7 +256,6 @@ public:
         nModifierUpdateBlock = 1; //approx Mon, 17 Apr 2017 04:00:00 GMT
         nMaxMoneyOut = 21000000 * COIN;
         nZerocoinStartHeight = nLastPOWBlock+10;
-        nZerocoinStartTime = 1506779240+nZerocoinStartHeight*nTargetSpacing;
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = nZerocoinStartHeight*2; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = nZerocoinStartHeight*2; //First block that bad serials emerged
