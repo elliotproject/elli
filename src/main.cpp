@@ -4332,6 +4332,10 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
 
     // Check that the header is valid (particularly PoW).  This is mostly
     // redundant with the call in AcceptBlockHeader.
+    if (block.GetHash().ToString() == "000000000c1146ba6fbbebc645aa28911cfd7540edb2193e1e90072230233a1a") {
+        return state.DoS(100, error("CheckBlock() : CheckBlockHeader failed"), REJECT_INVALID, "bad-header", true);
+    }
+    
     if (!CheckBlockHeader(block, state, fCheckPOW && block.IsProofOfWork()))
         return state.DoS(100, error("CheckBlock() : CheckBlockHeader failed"),
             REJECT_INVALID, "bad-header", true);
@@ -4611,6 +4615,10 @@ bool AcceptBlockHeader(const CBlock& block, CValidationState& state, CBlockIndex
     BlockMap::iterator miSelf = mapBlockIndex.find(hash);
     CBlockIndex* pindex = NULL;
 
+    if (block.GetHash().ToString() == "000000000c1146ba6fbbebc645aa28911cfd7540edb2193e1e90072230233a1a") {
+        return false;
+    }
+
     // TODO : ENABLE BLOCK CACHE IN SPECIFIC CASES
     if (miSelf != mapBlockIndex.end()) {
         // Block header is already known.
@@ -4669,6 +4677,10 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, 
     AssertLockHeld(cs_main);
 
     CBlockIndex*& pindex = *ppindex;
+
+    if (block.GetHash().ToString() == "000000000c1146ba6fbbebc645aa28911cfd7540edb2193e1e90072230233a1a") {
+        return false;
+    }
 
     // Get prev block index
     CBlockIndex* pindexPrev = NULL;
@@ -4970,7 +4982,7 @@ boost::filesystem::path GetBlockPosFilename(const CDiskBlockPos& pos, const char
 }
 
 CBlockIndex* InsertBlockIndex(uint256 hash)
-{
+{  
     if (hash == 0)
         return NULL;
 
@@ -6690,9 +6702,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 //       it was the one which was commented out
 int ActiveProtocol()
 {
-    if (GetAdjustedTime() > 1538352000) {
-        return PROTOCOL_VERSION;
-    }
+    return PROTOCOL_VERSION;
 
     if (IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
             return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
