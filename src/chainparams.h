@@ -114,7 +114,6 @@ public:
     int Zerocoin_Block_RecalculateAccumulators() const { return nBlockRecalculateAccumulators; }
     int Zerocoin_Block_FirstFraudulent() const { return nBlockFirstFraudulent; }
     int Zerocoin_Block_LastGoodCheckpoint() const { return nBlockLastGoodCheckpoint; }
-    int Zerocoin_StartTime() const { return nZerocoinStartTime; }
     int Block_Enforce_Invalid() const { return nBlockEnforceInvalidUTXO; }
 
     int Block_Enforce_Masternode() const { return nBlockEnforceMasternodePay; }
@@ -167,7 +166,6 @@ protected:
     int nZerocoinHeaderVersion;
     int64_t nBudget_Fee_Confirmations;
     int nZerocoinStartHeight;
-    int nZerocoinStartTime;
 
     int nBlockEnforceSerialRange;
     int nBlockRecalculateAccumulators;
