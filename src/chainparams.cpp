@@ -122,6 +122,10 @@ public:
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
 
+        //nEnforceBlockUpgradeMajority = 750;
+        //nRejectBlockOutdatedMajority = 950;
+        //nToCheckBlockUpgradeMajority = 1000;
+
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // ELLI: 1 day
         nTargetSpacing = 1 * 60;  // ELLI: 1 minute
@@ -133,6 +137,7 @@ public:
         nLastPOWBlock = 259200;
         nModifierUpdateBlock = 1;
         nZerocoinStartHeight = 359200;
+        nZerocoinStartTime = 1552479067; 
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
 
         nBlockRecalculateAccumulators = nZerocoinStartHeight*3; //Trigger a recalculation of accumulators
@@ -244,6 +249,7 @@ public:
         nModifierUpdateBlock = 1; //approx Mon, 17 Apr 2017 04:00:00 GMT
         nMaxMoneyOut = 21000000 * COIN;
         nZerocoinStartHeight = nLastPOWBlock+10;
+        nZerocoinStartTime = 1506779240+nZerocoinStartHeight*nTargetSpacing;
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = nZerocoinStartHeight*2; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = nZerocoinStartHeight*2; //First block that bad serials emerged
