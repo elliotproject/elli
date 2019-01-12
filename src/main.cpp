@@ -2173,7 +2173,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         ret = (50 * blockValue) / 100;
     } else if (nHeight > 151200 && nHeight <= Params().LAST_POW_BLOCK()) {
         ret = (60 * blockValue) / 100;
-    } else if (nHeight > Params().LAST_POW_BLOCK()) {
+    } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 404500) {
         int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
 
         //if a mn count is inserted into the function we are looking for a specific result for a masternode count
@@ -2404,6 +2404,8 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
                 ret = blockValue * .01;
             }
         }
+    } else if (nHeight > 404500) {
+        ret = (60 * blockValue) / 100;
     }
 
     return ret;
@@ -5865,6 +5867,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         // available. If not, ask the first peer connected for them.
         bool fMissingSporks = !pSporkDB->SporkExists(SPORK_14_NEW_PROTOCOL_ENFORCEMENT) &&
                 !pSporkDB->SporkExists(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2) &&
+                !pSporkDB->SporkExists(SPORK_17_NEW_PROTOCOL_ENFORCEMENT_3) &&
                 !pSporkDB->SporkExists(SPORK_16_ZEROCOIN_MAINTENANCE_MODE);
 
         if (fMissingSporks || !fRequestedSporksIDB){
@@ -6691,11 +6694,10 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 //       it was the one which was commented out
 int ActiveProtocol()
 {
+    if (IsSporkActive(SPORK_17_NEW_PROTOCOL_ENFORCEMENT_3)) {
+        return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT_2;
+    }
     return PROTOCOL_VERSION;
-
-    if (IsSporkActive(SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2))
-            return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
-    return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 }
 
 // requires LOCK(cs_vRecvMsg)

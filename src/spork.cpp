@@ -129,7 +129,7 @@ int64_t GetSporkValue(int nSporkID)
         if (nSporkID == SPORK_14_NEW_PROTOCOL_ENFORCEMENT) r = SPORK_14_NEW_PROTOCOL_ENFORCEMENT_DEFAULT;
         if (nSporkID == SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2) r = SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2_DEFAULT;
         if (nSporkID == SPORK_16_ZEROCOIN_MAINTENANCE_MODE) r = SPORK_16_ZEROCOIN_MAINTENANCE_MODE_DEFAULT;
-
+        if (nSporkID == SPORK_17_NEW_PROTOCOL_ENFORCEMENT_3) r = SPORK_17_NEW_PROTOCOL_ENFORCEMENT_3_DEFAULT;
         if (r == -1) LogPrintf("GetSpork::Unknown Spork %d\n", nSporkID);
     }
 
@@ -198,17 +198,17 @@ bool CSporkManager::Sign(CSporkMessage& spork)
     std::string errorMessage = "";
 
     if (!obfuScationSigner.SetKey(strMasterPrivKey, errorMessage, key2, pubkey2)) {
-        LogPrintf("CMasternodePayments::Sign - ERROR: Invalid masternodeprivkey: '%s'\n", errorMessage);
+        LogPrintf("CSporkManager::Sign - ERROR: Invalid sporkprivkey: '%s'\n", errorMessage);
         return false;
     }
 
     if (!obfuScationSigner.SignMessage(strMessage, errorMessage, spork.vchSig, key2)) {
-        LogPrintf("CMasternodePayments::Sign - Sign message failed");
+        LogPrintf("CSporkManager::Sign - Sign message failed");
         return false;
     }
 
     if (!obfuScationSigner.VerifyMessage(pubkey2, spork.vchSig, strMessage, errorMessage)) {
-        LogPrintf("CMasternodePayments::Sign - Verify message failed");
+        LogPrintf("CSporkManager::Sign - Verify message failed");
         return false;
     }
 
@@ -245,7 +245,18 @@ bool CSporkManager::SetPrivKey(std::string strPrivKey)
     // Test signing successful, proceed
     strMasterPrivKey = strPrivKey;
 
-    Sign(msg);
+    CBitcoinSecret bsecret;
+    bsecret.SetString(strPrivKey);
+    CKey key = bsecret.GetKey();
+    CPubKey pubkey  = key.GetPubKey();
+    LogPrintf("    * pubkey (hex): %s\n", HexStr(pubkey.GetHex()).c_str());
+
+    if (!Sign(msg)) {
+        LogPrintf("CSporkManager::SetPrivKey - Bad key\n");
+        return false;
+    } else {
+        LogPrintf("CSporkManager::SetPrivKey - Valid key\n");
+    }
 
     if (CheckSignature(msg)) {
         LogPrintf("CSporkManager::SetPrivKey - Successfully initialized as spork signer\n");
@@ -269,6 +280,7 @@ int CSporkManager::GetSporkIDByName(std::string strName)
     if (strName == "SPORK_14_NEW_PROTOCOL_ENFORCEMENT") return SPORK_14_NEW_PROTOCOL_ENFORCEMENT;
     if (strName == "SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2") return SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2;
     if (strName == "SPORK_16_ZEROCOIN_MAINTENANCE_MODE") return SPORK_16_ZEROCOIN_MAINTENANCE_MODE;
+    if (strName == "SPORK_17_NEW_PROTOCOL_ENFORCEMENT_3") return SPORK_17_NEW_PROTOCOL_ENFORCEMENT_3;
 
     return -1;
 }
@@ -287,6 +299,7 @@ std::string CSporkManager::GetSporkNameByID(int id)
     if (id == SPORK_14_NEW_PROTOCOL_ENFORCEMENT) return "SPORK_14_NEW_PROTOCOL_ENFORCEMENT";
     if (id == SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2) return "SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2";
     if (id == SPORK_16_ZEROCOIN_MAINTENANCE_MODE) return "SPORK_16_ZEROCOIN_MAINTENANCE_MODE";
+    if (id == SPORK_17_NEW_PROTOCOL_ENFORCEMENT_3) return "SPORK_17_NEW_PROTOCOL_ENFORCEMENT_3";
 
     return "Unknown";
 }

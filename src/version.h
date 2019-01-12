@@ -12,6 +12,7 @@
  */
 
 static const int PROTOCOL_VERSION = 70916;
+static const int MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT_2 = 70917;
 
 //! initial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;

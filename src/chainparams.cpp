@@ -2,6 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2017-2019 The ELLI developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -78,11 +79,12 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     (245200, uint256("0x000000000fbb2be5e282ecf641db7dfbf1670c5b96022107f6ccda2fc93b28f0"))
     (245300, uint256("0x000000002237850ac62255fdf5d9aa6d8976940dbf33b831d8ce380cf701ac96"))
     (245400, uint256("0x0000000015b9f1e9ff91930e177167610c7fadcff14076336f2b763d74686ba7"))
-    (245418, uint256("0x0000000044cf113364fbd4fd8d9629eccd80dda0c073a39869af08a75f6b52dc"));
+    (245418, uint256("0x0000000044cf113364fbd4fd8d9629eccd80dda0c073a39869af08a75f6b52dc"))
+    (392613, uint256("0x8767e8ebdf400af1470b8a4c30ae58160b2b29f91a7f5c13263e56b2335ffabd"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1538175515, // * UTC UNIX timestamp of last checkpoint block
-    283722,    // * total number of transactions between genesis and last checkpoint
+    1547212838, // * UTC UNIX timestamp of last checkpoint block
+    574601,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -132,7 +134,7 @@ public:
         pchMessageStart[2] = 0xa1;
         pchMessageStart[3] = 0xc1;
 
-        vAlertPubKey = ParseHex("04d079ca4f186f5f6e892be81638f2647b1f9eec5e753d7b488302484a412c37e4a07062c0b44887b16991e2878416c26bee4729874ed55f845a809aaed9fecb23");
+        vAlertPubKey = ParseHex("04f6655863e62d308f5bc2543f67b67c544680d6341f4a5beb053dfb19f8934369fa3e6291e1cf9b1bb454941ee9a022ed7d2c1afa4f75eba1a46320c442422930");
         nDefaultPort = 61317;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // ELLI starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
@@ -148,13 +150,13 @@ public:
         /** Height or Time Based Activations **/
         nLastPOWBlock = 259200;
         nModifierUpdateBlock = 1;
-        nZerocoinStartHeight = 359200;
+        nZerocoinStartHeight = 2147483646;
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
 
-        nBlockRecalculateAccumulators = nZerocoinStartHeight*3; //Trigger a recalculation of accumulators
-        nBlockFirstFraudulent = nZerocoinStartHeight*3; //First block that bad serials emerged
-        nBlockLastGoodCheckpoint = nZerocoinStartHeight*3; //Last valid accumulator checkpoint
-        nBlockEnforceInvalidUTXO = nZerocoinStartHeight*3; //Start enforcing the invalid UTXO's
+        nBlockRecalculateAccumulators = nZerocoinStartHeight; //Trigger a recalculation of accumulators
+        nBlockFirstFraudulent = nZerocoinStartHeight; //First block that bad serials emerged
+        nBlockLastGoodCheckpoint = nZerocoinStartHeight; //Last valid accumulator checkpoint
+        nBlockEnforceInvalidUTXO = nZerocoinStartHeight; //Start enforcing the invalid UTXO's
         nBlockEnforceMasternodePay = 15000; //Start enforcing mn pay
 
         const char* pszTimestamp = "elliotproject 31-03-2018 v2";
@@ -201,7 +203,7 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "04e5cd2be07aeb58fbc6f4bfbcf19dedb263a1bad4b3da794c751ed251ef12a30e73081ceeea4d440ef2929becf36fdc821b1942926ced251de5b244d91b67c6ba";
+        strSporkKey = "04fb4900320e010921a43774655cfe37780c9a5e90b1e9bf8626a922e84712541b2c4df8e77d6d3b0523515b14a53005af1094a3b65aea41b44fb706b6bbe87f56";
         strObfuscationPoolDummyAddress = "EQ37iidUyFaY3ozZRrQCth1zP3hhys52Py";
         nStartMasternodePayments = 1522479067;
 
@@ -255,12 +257,12 @@ public:
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 1; //approx Mon, 17 Apr 2017 04:00:00 GMT
         nMaxMoneyOut = 21000000 * COIN;
-        nZerocoinStartHeight = nLastPOWBlock+10;
+        nZerocoinStartHeight = 2147483646;
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
-        nBlockRecalculateAccumulators = nZerocoinStartHeight*2; //Trigger a recalculation of accumulators
-        nBlockFirstFraudulent = nZerocoinStartHeight*2; //First block that bad serials emerged
-        nBlockLastGoodCheckpoint = nZerocoinStartHeight*2; //Last valid accumulator checkpoint
-        nBlockEnforceInvalidUTXO = nZerocoinStartHeight*2; //Start enforcing the invalid UTXO's
+        nBlockRecalculateAccumulators = nZerocoinStartHeight; //Trigger a recalculation of accumulators
+        nBlockFirstFraudulent = nZerocoinStartHeight; //First block that bad serials emerged
+        nBlockLastGoodCheckpoint = nZerocoinStartHeight; //Last valid accumulator checkpoint
+        nBlockEnforceInvalidUTXO = nZerocoinStartHeight; //Start enforcing the invalid UTXO's
         nBlockEnforceMasternodePay = 1;
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1522479068;
